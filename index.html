@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starting Point Associates — A Live Sales Coaching Room for Founders</title>
+<meta name="description" content="A live group coaching room for founders, owner-operators, and leaders who need an extra set of ears on sales. One room — you choose how long you stay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#142850;          /* Starting Point Navy — brand primary */
+    --navy-90:#1b3560;
+    --navy-70:#3a5480;
+    --ink:#142850;
+    --paper:#ffffff;
+    --mist:#f4f6f9;          /* very light navy-tinted neutral */
+    --mist-2:#eaeef4;
+    --line:#dde3ec;
+    --muted:#5a6577;
+    --white:#ffffff;
+    --radius:14px;
+    --shadow:0 8px 26px rgba(20,40,80,.07);
+    --shadow-lift:0 18px 44px rgba(20,40,80,.16);
+    --maxw:1100px;
+    --serif:"Merriweather",Georgia,serif;
+    --sans:"Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;font-weight:400}
+  h1,h2,h3,.serif{font-family:var(--serif)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+  a{color:inherit}
+  .eyebrow{display:inline-block;font-family:var(--sans);font-size:12.5px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--navy-70)}
+
+  .compass-wm{position:absolute;pointer-events:none}
+
+  /* ---------- Brand lockup (official horizontal mark, recreated) ---------- */
+  .lockup{display:inline-block;line-height:1;text-decoration:none}
+  .lockup .l1{display:flex;align-items:center;font-family:var(--serif);font-weight:900;font-size:17px;letter-spacing:1.5px;color:#fff;white-space:nowrap}
+  .lockup .l1 .o-compass{width:20px;height:20px;margin:0 1px;flex:none}
+  .lockup .l2{display:flex;justify-content:space-between;font-family:var(--sans);font-weight:400;font-size:9px;color:#c7d1e0;margin-top:5px}
+  @media(max-width:600px){.lockup .l1{font-size:15px}.lockup .l1 .o-compass{width:17px;height:17px}.lockup .l2{font-size:8px}}
+
+  /* ---------- Header ---------- */
+  header{position:sticky;top:0;z-index:30;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{text-decoration:none}
+  .nav-cta{display:inline-block;background:#fff;color:var(--navy);text-decoration:none;font-weight:700;padding:10px 20px;border-radius:999px;font-size:14px;letter-spacing:.3px;transition:.2s}
+  .nav-cta:hover{background:var(--mist-2)}
+  @media(max-width:600px){.nav-cta{padding:9px 15px;font-size:13px}}
+
+  /* ---------- Hero ---------- */
+  .hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;padding:100px 0 96px}
+  .hero .compass-wm{top:50%;right:-120px;transform:translateY(-50%);width:600px;opacity:.07}
+  @media(max-width:760px){.hero .compass-wm{width:400px;right:-150px;opacity:.06}}
+  .hero-inner{position:relative;z-index:2;max-width:770px}
+  .hero .eyebrow{color:#8ea3c4;margin-bottom:22px}
+  .hero h1{font-weight:900;font-size:clamp(2.2rem,5.4vw,3.7rem);line-height:1.12;letter-spacing:-.5px}
+  .hero h1 .accent{color:#fff;border-bottom:3px solid rgba(255,255,255,.35);padding-bottom:2px}
+  .hero p.lede{font-family:var(--sans);font-weight:300;font-size:clamp(1.08rem,2.2vw,1.3rem);color:#cdd6e4;max-width:58ch;margin:26px 0 36px;line-height:1.6}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:700;font-family:var(--sans);border-radius:999px;padding:15px 30px;font-size:15.5px;letter-spacing:.3px;transition:.2s;border:1.6px solid transparent;cursor:pointer}
+  .btn-primary{background:#fff;color:var(--navy)}
+  .btn-primary:hover{background:var(--mist-2);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+  .hero-note{margin-top:22px;font-size:13.5px;color:#8ea3c4;letter-spacing:.2px}
+
+  /* ---------- Sections ---------- */
+  section{padding:80px 0}
+  .section-head{max-width:66ch;margin:0 auto 48px;text-align:center}
+  .section-head .eyebrow{margin-bottom:16px}
+  .section-head h2{font-weight:700;font-size:clamp(1.7rem,3.6vw,2.5rem);letter-spacing:-.4px;line-height:1.18;color:var(--navy)}
+  .section-head p{color:var(--muted);margin-top:16px;font-size:1.08rem;font-weight:300}
+
+  /* ---------- The room ---------- */
+  .room-note{text-align:center;margin:0 auto;max-width:52ch;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--navy)}
+
+  /* ---------- Tiers ---------- */
+  .offers{background:var(--mist)}
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+  @media(max-width:920px){.tiers{grid-template-columns:1fr;max-width:470px;margin:0 auto}}
+  .tier{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 28px;display:flex;flex-direction:column;box-shadow:var(--shadow);position:relative;transition:.22s}
+  .tier:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift)}
+  .tier.feature{border-color:var(--navy);border-width:1.5px;box-shadow:var(--shadow-lift);padding-top:38px;padding-bottom:40px;background:var(--navy);color:#fff}
+  .wm-clip{position:absolute;inset:0;overflow:hidden;border-radius:inherit;pointer-events:none}
+  .tier.feature .compass-wm{bottom:-90px;right:-70px;width:230px;opacity:.08}
+  .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;padding:6px 16px;border-radius:999px;border:1.5px solid #fff;z-index:3;white-space:nowrap}
+  .tier .kicker{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--navy-70);position:relative;z-index:2}
+  .tier.feature .kicker{color:#8ea3c4}
+  .tier .name{font-family:var(--serif);font-size:1.6rem;font-weight:900;color:var(--navy);margin:6px 0 3px;letter-spacing:-.3px;position:relative;z-index:2}
+  .tier.feature .name{color:#fff;font-size:1.75rem}
+  .tier .format{font-size:13.5px;color:var(--muted);font-weight:600;min-height:46px;position:relative;z-index:2}
+  .tier.feature .format{color:#cdd6e4}
+  .price{display:flex;align-items:baseline;gap:4px;margin:18px 0 2px;color:var(--navy);position:relative;z-index:2}
+  .tier.feature .price{color:#fff}
+  .price .cur{font-family:var(--serif);font-size:1.3rem;font-weight:700;transform:translateY(-16px)}
+  .price .amt{font-family:var(--serif);font-size:3rem;font-weight:900;letter-spacing:-1.5px;line-height:1}
+  .per{font-size:12.5px;color:var(--muted);font-weight:500;position:relative;z-index:2;margin-bottom:6px}
+  .per b{font-size:15px;font-weight:700;color:var(--navy)}
+  .tier.feature .per{color:#9fb0cb}
+  .tier.feature .per b{color:#fff}
+  .tier ul{list-style:none;margin:14px 0 28px;display:grid;gap:12px;position:relative;z-index:2}
+  .tier li{position:relative;padding-left:28px;font-size:.95rem;color:#3a4656;font-weight:400}
+  .tier.feature li{color:#dbe4ee}
+  .tier li .tick{position:absolute;left:0;top:2px;width:18px;height:18px;color:var(--navy)}
+  .tier.feature li .tick{color:#fff}
+  .tier .buy{margin-top:auto;position:relative;z-index:2}
+  .buy-btn{display:block;text-align:center;text-decoration:none;font-family:var(--sans);font-weight:700;letter-spacing:.3px;padding:15px;border-radius:11px;transition:.2s;border:1.6px solid var(--navy)}
+  .buy-outline{background:#fff;color:var(--navy)}
+  .buy-outline:hover{background:var(--mist);transform:translateY(-1px)}
+  .buy-solid{background:#fff;color:var(--navy);border-color:#fff}
+  .buy-solid:hover{background:var(--mist-2);transform:translateY(-1px)}
+  .pay-note{text-align:center;font-size:12px;color:var(--muted);margin-top:11px;font-weight:300;position:relative;z-index:2}
+  .tier.feature .pay-note{color:#9fb0cb}
+  .ladder-note{text-align:center;color:var(--muted);font-size:.98rem;font-weight:300;margin:40px auto 0;max-width:60ch}
+
+  /* ---------- Mission ---------- */
+  .about{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  @media(max-width:840px){.about{grid-template-columns:1fr;gap:34px}}
+  .about h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:700;letter-spacing:-.4px;color:var(--navy);margin-bottom:20px;line-height:1.2}
+  .about p{color:#3a4656;margin-bottom:16px;font-weight:300;font-size:1.05rem}
+  .quote-card{background:var(--navy);color:#fff;border-radius:18px;padding:40px 36px;position:relative;overflow:hidden}
+  .quote-card .compass-wm{bottom:-70px;right:-60px;width:240px;opacity:.09}
+  .quote-card .big{font-family:var(--serif);font-style:italic;font-size:1.3rem;line-height:1.5;position:relative;z-index:2}
+  .quote-card .who{margin-top:20px;font-size:13.5px;color:#9fb0cb;letter-spacing:.3px;position:relative;z-index:2}
+
+  /* ---------- CTA ---------- */
+  .cta-band{background:var(--navy);color:#fff;text-align:center;border-radius:22px;padding:64px 30px;position:relative;overflow:hidden}
+  .cta-band .compass-wm{top:50%;left:50%;transform:translate(-50%,-50%);width:460px;opacity:.06}
+  .cta-band h2{font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:700;letter-spacing:-.4px;position:relative;z-index:2}
+  .cta-band p{color:#cdd6e4;max-width:54ch;margin:16px auto 30px;font-size:1.08rem;font-weight:300;position:relative;z-index:2}
+  .cta-band .btn{position:relative;z-index:2}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--navy);color:#9fb0cb;padding:48px 0}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .foot a{color:#fff;font-weight:500;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:1px}
+  .foot .small{font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand lockup" href="#top" aria-label="Starting Point Associates — home">
+      <span class="l1">STARTING&nbsp;P<svg class="o-compass" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="7"/>
+        <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
+        <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
+        <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
+        <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
+        <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
+        <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
+        <circle cx="50" cy="50" r="8" fill="#142850" stroke="#fff" stroke-width="5"/>
+      </svg>INT</span>
+      <span class="l2"><span>A</span><span>S</span><span>S</span><span>O</span><span>C</span><span>I</span><span>A</span><span>T</span><span>E</span><span>S</span></span>
+    </a>
+    <a class="nav-cta" href="#offers">Reserve a seat</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <svg class="compass-wm" viewBox="0 0 100 100" aria-hidden="true">
+    <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="5"/>
+    <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
+    <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
+    <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
+    <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
+    <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
+    <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
+    <circle cx="50" cy="50" r="6" fill="#fff"/>
+  </svg>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Live group sales coaching</span>
+    <h1>Stop carrying sales <span class="accent">alone</span>.</h1>
+    <p class="lede">The Starting Point is a live coaching room for founders, owner-operators, and leaders working through the day-to-day of sales — a place to bring whatever&rsquo;s in front of you this week and do a gut check before you act.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#offers">Reserve your seat</a>
+      <a class="btn btn-ghost" href="#room">What happens in the room</a>
+    </div>
+    <p class="hero-note">One room. Every session live. You choose how long you stay.</p>
+  </div>
+</section>
+
+<!-- THE ROOM -->
+<section id="room">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The room</span>
+      <h2>An extra set of eyes on whatever sales looks like this week.</h2>
+      <p>Every session is live, and every session is the same room. No tracks, no canned curriculum — you bring what&rsquo;s challenging you in sales right now, and the room works it with you.</p>
+    </div>
+    <p class="room-note">If it touches sales, it belongs in the room.</p>
+  </div>
+</section>
+
+<!-- OFFERS -->
+<section class="offers" id="offers">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Founding member pricing</span>
+      <h2>One room. Three ways in.</h2>
+      <p>Same weekly room, same sessions, same seat &mdash; you&rsquo;re choosing how long you stay and how much compounds while you&rsquo;re there. Founding rates hold until the first room fills. Then they rise.</p>
+    </div>
+
+    <div class="tiers">
+      <!-- One Month -->
+      <div class="tier">
+        <div class="kicker">Step in</div>
+        <div class="name">One Month</div>
+        <div class="format">Four weekly live sessions.</div>
+        <div class="price"><span class="cur">$</span><span class="amt">497</span></div>
+        <div class="per"><b>$497/mo</b> &middot; founding member rate</div>
+        <ul>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>The same room, full access — no lite version</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Bring what&rsquo;s in front of you each week</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>A month of accountability between sessions</li>
+        </ul>
+        <div class="buy">
+          <a class="buy-btn buy-outline" href="https://my.freshbooks.com/#/checkout/52bd5e275a7d47728386e197d9986461" target="_blank" rel="noopener">Take a month</a>
+          <div class="pay-note">Secure checkout via FreshBooks</div>
+        </div>
+      </div>
+
+      <!-- Three Months (featured, center) -->
+      <div class="tier feature">
+        <span class="badge">Most popular</span>
+        <div class="wm-clip">
+          <svg class="compass-wm" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="5"/>
+            <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
+            <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
+            <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
+            <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
+            <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
+            <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
+            <circle cx="50" cy="50" r="6" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="kicker">Settle in</div>
+        <div class="name">Three Months</div>
+        <div class="format">Twelve weekly live sessions over three months.</div>
+        <div class="price"><span class="cur">$</span><span class="amt">1,197</span></div>
+        <div class="per"><b>$399/mo</b> &middot; founding member rate</div>
+        <ul>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Enough runway to work a real problem to done</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>The room adjusts as you grow</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Access to the asset library while you&rsquo;re in &mdash; frameworks, worksheets, recordings, built in real time</li>
+        </ul>
+        <div class="buy">
+          <a class="buy-btn buy-solid" href="https://my.freshbooks.com/#/checkout/1e2f2e3143ff40d7a9bbab936536d456" target="_blank" rel="noopener">Hold your seat</a>
+          <div class="pay-note">Secure checkout via FreshBooks</div>
+        </div>
+      </div>
+
+      <!-- Six Months -->
+      <div class="tier">
+        <div class="kicker">All in</div>
+        <div class="name">Six Months</div>
+        <div class="format">Twenty-four weekly live sessions over six months.</div>
+        <div class="price"><span class="cur">$</span><span class="amt">1,997</span></div>
+        <div class="per"><b>$333/mo</b> &middot; founding member rate</div>
+        <ul>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Three Months, with twice the runway</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>A private 1-on-1 origin-tracing session with JP</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Lifetime access to the asset library &mdash; everything we ever build</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Peers who know your story and hold you to it</li>
+        </ul>
+        <div class="buy">
+          <a class="buy-btn buy-outline" href="https://my.freshbooks.com/#/checkout/dbc045d8c82440969a289d1d84a0d179" target="_blank" rel="noopener">Reserve my founding seat</a>
+          <div class="pay-note">Secure checkout via FreshBooks</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="ladder-note">The asset library isn&rsquo;t a vault waiting for you &mdash; it&rsquo;s being built in real time by this first room. Founding members shape what it becomes.</p>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section>
+  <div class="wrap about">
+    <div>
+      <span class="eyebrow">The mission</span>
+      <h2>No leader should have to figure out sales alone.</h2>
+      <p>Revenue is a leadership responsibility &mdash; and sales is a function of it. The Starting Point exists to give founders and owner-operators an extra set of eyes and a clear starting point, so you can build a sales function you respect, successfully scale, and eventually hand off.</p>
+      <p>I&rsquo;ve spent fifteen years doing this inside five companies, growing them from a couple million to ten and twenty &mdash; most of that time carrying the number myself. I know exactly what it feels like to be the whole sales department. That&rsquo;s who this room is for.</p>
+    </div>
+    <div class="quote-card">
+      <svg class="compass-wm" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="5"/>
+        <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
+        <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
+        <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
+        <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
+        <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
+        <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
+        <circle cx="50" cy="50" r="6" fill="#fff"/>
+      </svg>
+      <div class="big">&ldquo;If you are the sales hero of your company, your business is practically unsellable.&rdquo;</div>
+      <div class="who">&mdash; JP Rinylo, Starting Point Associates</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-band">
+      <svg class="compass-wm" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="5"/>
+        <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
+        <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
+        <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
+        <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
+        <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
+        <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
+        <circle cx="50" cy="50" r="6" fill="#fff"/>
+      </svg>
+      <h2>The room is forming now.</h2>
+      <p>The first seats are open ahead of the first sessions. Founding member pricing holds until the room fills &mdash; after that, it only moves up.</p>
+      <a class="btn btn-primary" href="#offers">Become a founding member</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span class="lockup">
+      <span class="l1">STARTING&nbsp;P<svg class="o-compass" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="7"/>
+        <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
+        <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
+        <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
+        <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
+        <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
+        <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
+        <circle cx="50" cy="50" r="8" fill="#142850" stroke="#fff" stroke-width="5"/>
+      </svg>INT</span>
+      <span class="l2"><span>A</span><span>S</span><span>S</span><span>O</span><span>C</span><span>I</span><span>A</span><span>T</span><span>E</span><span>S</span></span>
+    </span>
+    <div class="small">Questions? <a href="mailto:jprinylo@gmail.com">Get in touch</a></div>
+    <div class="small">&copy; 2026 Starting Point Associates</div>
+  </div>
+</footer>
+
+</body>
+</html>
