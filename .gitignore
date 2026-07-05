@@ -1,0 +1,6 @@
+# Starting Point website repo — publish ONLY the site file.
+# Everything in this folder is ignored by default...
+/*
+# ...except what the live site actually needs:
+!/.gitignore
+!/index.html
