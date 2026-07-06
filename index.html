@@ -130,6 +130,7 @@
   .quote-card .who{margin-top:20px;font-size:13.5px;color:#9fb0cb;letter-spacing:.3px;position:relative;z-index:2}
   .pull{padding:74px 0 10px}
   .pull-quote{text-align:center;max-width:26ch;margin:0 auto;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.4rem,3.2vw,1.95rem);line-height:1.36;color:var(--navy);letter-spacing:-.3px}
+  .pull-mark{display:block;text-align:center;font-family:var(--serif);font-weight:900;font-size:clamp(3.4rem,7vw,5.5rem);line-height:.55;color:var(--navy);opacity:.15;margin-bottom:2px}
 
   /* ---------- CTA ---------- */
   .cta-band{background:var(--navy);color:#fff;text-align:center;border-radius:22px;padding:64px 30px;position:relative;overflow:hidden}
@@ -193,7 +194,8 @@
 <!-- PULL QUOTE -->
 <section class="pull">
   <div class="wrap">
-    <p class="pull-quote">&ldquo;9 times out of 10, the sales problem you think you have isn&rsquo;t a sales problem at all.&rdquo;</p>
+    <span class="pull-mark" aria-hidden="true">&ldquo;</span>
+    <p class="pull-quote">9 times out of 10, the sales problem you think you have isn&rsquo;t a sales problem at all.</p>
   </div>
 </section>
 
@@ -210,7 +212,7 @@
 </section>
 
 <!-- MISSION -->
-<section>
+<section style="padding-top:44px">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">The mission</span>
