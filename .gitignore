@@ -4,3 +4,4 @@
 # ...except what the live site actually needs:
 !/.gitignore
 !/index.html
+!/vip.html
