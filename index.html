@@ -85,11 +85,11 @@
 
   /* ---------- Tiers ---------- */
   .offers{background:var(--mist)}
-  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+  .tiers{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;align-items:stretch;max-width:760px;margin:0 auto}
   @media(max-width:920px){.tiers{grid-template-columns:1fr;max-width:470px;margin:0 auto}}
-  .tier{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 28px;display:flex;flex-direction:column;box-shadow:var(--shadow);position:relative;transition:.22s}
+  .tier{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:38px 28px 40px;display:flex;flex-direction:column;box-shadow:var(--shadow);position:relative;transition:.22s}
   .tier:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift)}
-  .tier.feature{border-color:var(--navy);border-width:1.5px;box-shadow:var(--shadow-lift);padding-top:38px;padding-bottom:40px;background:var(--navy);color:#fff}
+  .tier.feature{border-color:var(--navy);border-width:1.5px;box-shadow:var(--shadow-lift);background:var(--navy);color:#fff}
   .wm-clip{position:absolute;inset:0;overflow:hidden;border-radius:inherit;pointer-events:none}
   .tier.feature .compass-wm{bottom:-90px;right:-70px;width:230px;opacity:.08}
   .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;padding:6px 16px;border-radius:999px;border:1.5px solid #fff;z-index:3;white-space:nowrap}
@@ -121,6 +121,9 @@
   .pay-note{text-align:center;font-size:12px;color:var(--muted);margin-top:11px;font-weight:300;position:relative;z-index:2}
   .tier.feature .pay-note{color:#9fb0cb}
   .ladder-note{text-align:center;color:var(--muted);font-size:.98rem;font-weight:300;margin:40px auto 0;max-width:60ch}
+  .private-note{text-align:center;color:var(--muted);font-size:.95rem;font-weight:300;margin:32px auto 0;padding-top:28px;border-top:1px solid var(--line);max-width:54ch}
+  .private-note a{color:var(--navy);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(20,40,80,.32);padding-bottom:1px;transition:.2s}
+  .private-note a:hover{border-bottom-color:var(--navy)}
 
   /* ---------- Mission ---------- */
   .about{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
@@ -235,30 +238,12 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Founding member pricing</span>
-      <h2>One room. Three ways in.</h2>
+      <h2>One room. Two ways in.</h2>
       <p>Same weekly room, same sessions, same seat &mdash; you&rsquo;re choosing how long you stay and how much compounds while you&rsquo;re there. Founding rates hold until the first room fills. Then they rise.</p>
     </div>
 
     <div class="tiers">
-      <!-- One Month -->
-      <div class="tier">
-        <div class="kicker">Step in</div>
-        <div class="name">One Month</div>
-        <div class="format">Four weekly live sessions.</div>
-        <div class="price"><span class="cur">$</span><span class="amt">497</span></div>
-        <div class="per">One-time &middot; founding member rate</div>
-        <ul>
-          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>The full room — same access as every tier, no lite version</li>
-          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Bring what&rsquo;s in front of you each week</li>
-          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>A month of accountability between sessions</li>
-        </ul>
-        <div class="buy">
-          <a class="buy-btn buy-outline" href="https://buy.stripe.com/fZuaEWeHz0JQgNC9Ux9MY00" target="_blank" rel="noopener">Take a month</a>
-          <div class="pay-note">Secure checkout via Stripe</div>
-        </div>
-      </div>
-
-      <!-- Three Months (featured, center) -->
+      <!-- Three Months (featured) -->
       <div class="tier feature">
         <span class="badge">Most popular</span>
         <div class="wm-clip">
@@ -309,7 +294,9 @@
       </div>
     </div>
 
-    <p class="ladder-note">The asset library isn&rsquo;t a vault waiting for you &mdash; it&rsquo;s being built in real time by this first room. Founding members shape what it becomes.</p>
+    <p class="ladder-note">Everything in the asset library gets built by this first room, in real time. Founding members shape what it becomes.</p>
+
+    <p class="private-note">Some situations need more than the room. If you&rsquo;re looking for direct, ongoing work on your business, <a href="mailto:jp.rinylo@startingpointassociates.com?subject=Private%20coaching">get in touch</a>.</p>
   </div>
 </section>
 
