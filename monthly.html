@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Your Seat — The Starting Point</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23142850'/%3E%3Cg transform='translate(50 50) scale(0.74) translate(-50 -50)'%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23fff' stroke-width='7'/%3E%3Cpath d='M50 0 L58 42 L50 50 L42 42 Z' fill='%23fff'/%3E%3Cpath d='M50 100 L42 58 L50 50 L58 58 Z' fill='%23fff'/%3E%3Cpath d='M0 50 L42 42 L50 50 L42 58 Z' fill='%23fff'/%3E%3Cpath d='M100 50 L58 58 L50 50 L58 42 Z' fill='%23fff'/%3E%3Cpath d='M26 26 L46 40 L40 46 Z' fill='%23fff'/%3E%3Cpath d='M74 26 L60 46 L54 40 Z' fill='%23fff'/%3E%3Cpath d='M26 74 L40 54 L46 60 Z' fill='%23fff'/%3E%3Cpath d='M74 74 L54 60 L60 54 Z' fill='%23fff'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%23142850' stroke='%23fff' stroke-width='5'/%3E%3C/g%3E%3C/svg%3E">
+<meta name="theme-color" content="#142850">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#142850;
+    --navy-70:#3a5480;
+    --ink:#142850;
+    --paper:#ffffff;
+    --mist:#f4f6f9;
+    --mist-2:#eaeef4;
+    --line:#dde3ec;
+    --muted:#5a6577;
+    --radius:14px;
+    --shadow:0 8px 26px rgba(20,40,80,.07);
+    --shadow-lift:0 18px 44px rgba(20,40,80,.16);
+    --maxw:1100px;
+    --serif:"Merriweather",Georgia,serif;
+    --sans:"Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;font-weight:400}
+  h1,h2,h3,.serif{font-family:var(--serif)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+  a{color:inherit}
+  .eyebrow{display:inline-block;font-family:var(--sans);font-size:12.5px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--navy-70)}
+  .compass-wm{position:absolute;pointer-events:none}
+
+  /* ---------- Brand lockup ---------- */
+  .lockup{display:inline-block;line-height:1;text-decoration:none}
+  .lockup .l1{display:flex;align-items:center;font-family:var(--serif);font-weight:900;font-size:17px;letter-spacing:1.5px;color:#fff;white-space:nowrap}
+  .lockup .l1 .o-compass{width:20px;height:20px;margin:0 1px;flex:none}
+  .lockup .l2{display:flex;justify-content:space-between;font-family:var(--sans);font-weight:400;font-size:9px;color:#c7d1e0;margin-top:5px}
+  @media(max-width:600px){.lockup .l1{font-size:15px}.lockup .l1 .o-compass{width:17px;height:17px}.lockup .l2{font-size:8px}}
+
+  /* ---------- Header ---------- */
+  header{background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .nav .tag{font-size:12px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#8ea3c4}
+  @media(max-width:600px){.nav .tag{display:none}}
+
+  /* ---------- Hero ---------- */
+  .hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;padding:88px 0 80px}
+  .hero .compass-wm{top:50%;right:-120px;transform:translateY(-50%);width:600px;opacity:.07}
+  @media(max-width:760px){.hero .compass-wm{width:400px;right:-150px;opacity:.06}}
+  .hero-inner{position:relative;z-index:2;max-width:760px}
+  .hero .eyebrow{color:#8ea3c4;margin-bottom:22px}
+  .hero h1{font-weight:900;font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.12;letter-spacing:-.5px}
+  .hero p.lede{font-family:var(--sans);font-weight:300;font-size:clamp(1.06rem,2.2vw,1.28rem);color:#cdd6e4;max-width:58ch;margin:26px 0 0;line-height:1.6}
+  .hero-note{margin-top:26px;font-size:13.5px;color:#8ea3c4;letter-spacing:.2px}
+
+  /* ---------- Sections ---------- */
+  section{padding:74px 0}
+  .section-head{max-width:66ch;margin:0 auto 44px;text-align:center}
+  .section-head .eyebrow{margin-bottom:16px}
+  .section-head h2{font-weight:700;font-size:clamp(1.6rem,3.4vw,2.3rem);letter-spacing:-.4px;line-height:1.18;color:var(--navy)}
+  .section-head p{color:var(--muted);margin-top:16px;font-size:1.06rem;font-weight:300}
+
+  /* ---------- The seat card ---------- */
+  .offers{background:var(--mist)}
+  .seat-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;max-width:940px;margin:0 auto}
+  @media(max-width:880px){.seat-grid{grid-template-columns:1fr;max-width:480px;gap:26px}}
+  .tier{background:var(--navy);color:#fff;border:1.5px solid var(--navy);border-radius:var(--radius);padding:38px 30px 40px;display:flex;flex-direction:column;box-shadow:var(--shadow-lift);position:relative}
+  .wm-clip{position:absolute;inset:0;overflow:hidden;border-radius:inherit;pointer-events:none}
+  .tier .compass-wm{bottom:-90px;right:-70px;width:230px;opacity:.08}
+  .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;padding:6px 16px;border-radius:999px;border:1.5px solid #fff;z-index:3;white-space:nowrap}
+  .tier .kicker{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#8ea3c4;position:relative;z-index:2}
+  .tier .name{font-family:var(--serif);font-size:1.75rem;font-weight:900;color:#fff;margin:6px 0 3px;letter-spacing:-.3px;position:relative;z-index:2}
+  .tier .format{font-size:13.5px;color:#cdd6e4;font-weight:600;position:relative;z-index:2}
+
+  .price-block{margin:22px 0 4px;position:relative;z-index:2}
+  .price{display:flex;align-items:baseline;gap:4px;color:#fff}
+  .price .cur{font-family:var(--serif);font-size:1.3rem;font-weight:700;transform:translateY(-16px)}
+  .price .amt{font-family:var(--serif);font-size:3rem;font-weight:900;letter-spacing:-1.5px;line-height:1}
+  .price .cadence{font-family:var(--sans);font-size:1rem;font-weight:600;color:#9fb0cb;margin-left:2px}
+  .per{font-size:12.5px;color:#9fb0cb;font-weight:500;position:relative;z-index:2;margin-bottom:6px}
+
+  .tier ul{list-style:none;margin:20px 0 28px;display:grid;gap:12px;position:relative;z-index:2}
+  .tier li{position:relative;padding-left:28px;font-size:.95rem;color:#dbe4ee;font-weight:400}
+  .tier li .tick{position:absolute;left:0;top:2px;width:18px;height:18px;color:#fff}
+  .tier .buy{margin-top:auto;position:relative;z-index:2}
+  .buy-btn{display:block;text-align:center;text-decoration:none;font-family:var(--sans);font-weight:700;letter-spacing:.3px;padding:15px;border-radius:11px;transition:.2s;border:1.6px solid #fff;background:#fff;color:var(--navy)}
+  .buy-btn:hover{background:var(--mist-2);transform:translateY(-1px)}
+  .pay-note{text-align:center;font-size:12px;color:#9fb0cb;margin-top:11px;font-weight:300;position:relative;z-index:2}
+
+  /* ---------- Terms panel ---------- */
+  .terms{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;box-shadow:var(--shadow)}
+  .terms h3{font-family:var(--serif);font-size:1.25rem;font-weight:900;color:var(--navy);letter-spacing:-.2px;margin-bottom:6px}
+  .terms .sub{color:var(--muted);font-size:.95rem;font-weight:300;margin-bottom:22px}
+  .steps{list-style:none;display:grid;gap:20px;counter-reset:s}
+  .steps li{position:relative;padding-left:44px;counter-increment:s}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:0;width:29px;height:29px;border-radius:50%;background:var(--mist-2);color:var(--navy);font-family:var(--serif);font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center}
+  .steps b{display:block;font-size:.98rem;font-weight:700;color:var(--navy)}
+  .steps span{display:block;font-size:.93rem;color:var(--muted);font-weight:300;margin-top:2px}
+  .fineprint{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted);font-weight:300}
+
+  /* ---------- Note band ---------- */
+  .pull{padding:66px 0 0}
+  .pull-quote{text-align:center;max-width:30ch;margin:0 auto;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.3rem,3vw,1.8rem);line-height:1.38;color:var(--navy);letter-spacing:-.3px}
+  .pull-mark{display:block;text-align:center;font-family:var(--serif);font-weight:900;font-size:clamp(3.4rem,7vw,5.5rem);line-height:.55;color:var(--navy);opacity:.15;margin-bottom:2px}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--navy);color:#9fb0cb;padding:48px 0;margin-top:74px}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .foot a{color:#fff;font-weight:500;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:1px}
+  .foot .small{font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <span class="lockup">
+      <span class="l1">STARTING&nbsp;P<svg class="o-compass" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="7"/>
+        <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
+        <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
+        <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
+        <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
+        <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
+        <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
+        <circle cx="50" cy="50" r="8" fill="#142850" stroke="#fff" stroke-width="5"/>
+      </svg>INT</span>
+      <span class="l2"><span>A</span><span>S</span><span>S</span><span>O</span><span>C</span><span>I</span><span>A</span><span>T</span><span>E</span><span>S</span></span>
+    </span>
+    <span class="tag">Private invitation</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="compass-wm" viewBox="0 0 100 100" aria-hidden="true">
+    <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="5"/>
+    <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
+    <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
+    <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
+    <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
+    <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
+    <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
+    <circle cx="50" cy="50" r="6" fill="#fff"/>
+  </svg>
+  <div class="wrap hero-inner">
+    <span class="eyebrow" id="eyebrow">A seat held for you</span>
+    <h1 id="headline">Your seat in The Starting Point is ready.</h1>
+    <p class="lede">The Starting Point is a live coaching room for founders, owner-operators, and leaders working through the day-to-day of sales. This is the full seat &mdash; the same room every founding member is in &mdash; on a month-to-month basis, so you can start now and stay as long as it&rsquo;s working.</p>
+    <p class="hero-note" id="heronote">One room. Every session live.</p>
+  </div>
+</section>
+
+<!-- THE SEAT -->
+<section class="offers">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What you&rsquo;re stepping into</span>
+      <h2>Your founding seat, month to month</h2>
+      <p>Same weekly room, same sessions, same access as every founding member &mdash; without the upfront commitment.</p>
+    </div>
+
+    <div class="seat-grid">
+      <!-- Seat card -->
+      <div class="tier">
+        <span class="badge">Founding rate</span>
+        <div class="wm-clip">
+          <svg class="compass-wm" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="5"/>
+            <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
+            <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
+            <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
+            <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
+            <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
+            <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
+            <circle cx="50" cy="50" r="6" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="kicker">Step in</div>
+        <div class="name">The Room, Monthly</div>
+        <div class="format">Weekly live sessions. Month to month.</div>
+
+        <div class="price-block">
+          <div class="price"><span class="cur">$</span><span class="amt">399</span><span class="cadence">/mo</span></div>
+        </div>
+        <div class="per">Founding member rate &middot; billed monthly</div>
+
+        <ul>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>The full room &mdash; same live sessions and access as every founding member</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Bring what&rsquo;s in front of you each week</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Access to the asset library while you&rsquo;re in</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Stay as long as it&rsquo;s working &mdash; step out anytime, no lock-in</li>
+        </ul>
+
+        <div class="buy">
+          <a class="buy-btn" id="cta" href="https://buy.stripe.com/4gM28q2YR1NU7d26Il9MY03" target="_blank" rel="noopener">Start my seat</a>
+          <div class="pay-note">Secure monthly checkout via Stripe</div>
+        </div>
+      </div>
+
+      <!-- Terms -->
+      <div class="terms">
+        <h3>How this works</h3>
+        <p class="sub">Three minutes, and you&rsquo;re in the room.</p>
+        <ol class="steps">
+          <li>
+            <b>Start the seat</b>
+            <span>Stripe checkout opens at $399/month. You&rsquo;ll enter your name, email, and phone so I know how to reach you.</span>
+          </li>
+          <li>
+            <b>You get the room details</b>
+            <span>Session day and time, the standing link, and the asset library. Everything a founding member gets, because that&rsquo;s what you are.</span>
+          </li>
+          <li>
+            <b>You show up with something real</b>
+            <span>Bring a live deal, a prospect you can&rsquo;t read, a hiring decision you keep circling. The room works it with you.</span>
+          </li>
+        </ol>
+        <p class="fineprint">Billed $399 each month until you cancel. No commitment and no minimum &mdash; stay month to month for as long as the room is earning its place, and step out whenever it isn&rsquo;t.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<section class="pull">
+  <div class="wrap">
+    <span class="pull-mark" aria-hidden="true">&ldquo;</span>
+    <p class="pull-quote">9 times out of 10, the sales problem you think you have isn&rsquo;t a sales problem at all.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span class="lockup">
+      <span class="l1">STARTING&nbsp;P<svg class="o-compass" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="7"/>
+        <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
+        <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
+        <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
+        <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
+        <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
+        <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
+        <circle cx="50" cy="50" r="8" fill="#142850" stroke="#fff" stroke-width="5"/>
+      </svg>INT</span>
+      <span class="l2"><span>A</span><span>S</span><span>S</span><span>O</span><span>C</span><span>I</span><span>A</span><span>T</span><span>E</span><span>S</span></span>
+    </span>
+    <div class="small">Questions? <a href="mailto:jp.rinylo@startingpointassociates.com">Get in touch</a></div>
+    <div class="small">&copy; 2026 Starting Point Associates</div>
+  </div>
+</footer>
+
+<script>
+/* ------------------------------------------------------------------
+   Monthly enrollment page — driven by URL parameters, so one file
+   works for every person you offer the monthly seat to.
+
+     n  = first name          e.g. n=Firstname
+     by = respond-by date     e.g. by=August%201
+
+   Example:
+     /monthly.html?n=Firstname&by=August%201
+
+   Unlike vip.html there is no promo code — this is a paid monthly
+   subscription at the founding rate, not a comp.
+------------------------------------------------------------------ */
+(function () {
+  var p = new URLSearchParams(window.location.search);
+
+  // Params are user-controlled: constrain tightly and never inject as HTML.
+  var name = (p.get('n') || '').replace(/[^\p{L}\p{M}'\- ]/gu, '').trim().slice(0, 40);
+  var by   = (p.get('by') || '').replace(/[^\p{L}0-9,'\-\/ ]/gu, '').trim().slice(0, 40);
+
+  function txt(id, value) { document.getElementById(id).textContent = value; }
+
+  if (name) {
+    txt('headline', name + ', your seat in The Starting Point is ready.');
+  }
+
+  if (by) {
+    txt('heronote', 'One room. Every session live. This invitation is open through ' + by + '.');
+  }
+})();
+</script>
+
+</body>
+</html>
