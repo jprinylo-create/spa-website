@@ -85,8 +85,8 @@
 
   /* ---------- Tiers ---------- */
   .offers{background:var(--mist)}
-  .tiers{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;align-items:stretch;max-width:760px;margin:0 auto}
-  @media(max-width:920px){.tiers{grid-template-columns:1fr;max-width:470px;margin:0 auto}}
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;max-width:1080px;margin:0 auto}
+  @media(max-width:980px){.tiers{grid-template-columns:1fr;max-width:470px;margin:0 auto}}
   .tier{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:38px 28px 40px;display:flex;flex-direction:column;box-shadow:var(--shadow);position:relative;transition:.22s}
   .tier:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift)}
   .tier.feature{border-color:var(--navy);border-width:1.5px;box-shadow:var(--shadow-lift);background:var(--navy);color:#fff}
@@ -238,12 +238,30 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Founding member pricing</span>
-      <h2>One room. Two ways in.</h2>
+      <h2>One room. Three ways in.</h2>
       <p>Same weekly room, same sessions, same seat &mdash; you&rsquo;re choosing how long you stay and how much compounds while you&rsquo;re there. Founding rates hold until the first room fills. Then they rise.</p>
     </div>
 
     <div class="tiers">
-      <!-- Three Months (featured) -->
+      <!-- Three Months -->
+      <div class="tier">
+        <div class="kicker">Settle in</div>
+        <div class="name">Three Months</div>
+        <div class="format">Twelve weekly live sessions over three months.</div>
+        <div class="price"><span class="cur">$</span><span class="amt">1,197</span></div>
+        <div class="per"><b>$399/mo</b> &middot; founding member rate</div>
+        <ul>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Enough runway to work a real problem to done</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>The room adjusts as you grow</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Access to the asset library while you&rsquo;re in &mdash; frameworks, worksheets, recordings, built in real time</li>
+        </ul>
+        <div class="buy">
+          <a class="buy-btn buy-outline" href="https://buy.stripe.com/bJe14meHzbou7d27Mp9MY01" target="_blank" rel="noopener">Hold your seat</a>
+          <div class="pay-note">Secure checkout via Stripe</div>
+        </div>
+      </div>
+
+      <!-- Six Months (featured) -->
       <div class="tier feature">
         <span class="badge">Most popular</span>
         <div class="wm-clip">
@@ -258,24 +276,6 @@
             <circle cx="50" cy="50" r="6" fill="#fff"/>
           </svg>
         </div>
-        <div class="kicker">Settle in</div>
-        <div class="name">Three Months</div>
-        <div class="format">Twelve weekly live sessions over three months.</div>
-        <div class="price"><span class="cur">$</span><span class="amt">1,197</span></div>
-        <div class="per"><b>$399/mo</b> &middot; founding member rate</div>
-        <ul>
-          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Enough runway to work a real problem to done</li>
-          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>The room adjusts as you grow</li>
-          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Access to the asset library while you&rsquo;re in &mdash; frameworks, worksheets, recordings, built in real time</li>
-        </ul>
-        <div class="buy">
-          <a class="buy-btn buy-solid" href="https://buy.stripe.com/bJe14meHzbou7d27Mp9MY01" target="_blank" rel="noopener">Hold your seat</a>
-          <div class="pay-note">Secure checkout via Stripe</div>
-        </div>
-      </div>
-
-      <!-- Six Months -->
-      <div class="tier">
         <div class="kicker">All in</div>
         <div class="name">Six Months</div>
         <div class="format">Twenty-four weekly live sessions over six months.</div>
@@ -288,7 +288,26 @@
           <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Peers who know your story and hold you to it</li>
         </ul>
         <div class="buy">
-          <a class="buy-btn buy-outline" href="https://buy.stripe.com/cNibJ056ZdwC9la6Il9MY02" target="_blank" rel="noopener">Reserve my founding seat</a>
+          <a class="buy-btn buy-solid" href="https://buy.stripe.com/cNibJ056ZdwC9la6Il9MY02" target="_blank" rel="noopener">Reserve my founding seat</a>
+          <div class="pay-note">Secure checkout via Stripe</div>
+        </div>
+      </div>
+
+      <!-- Twelve Months -->
+      <div class="tier">
+        <div class="kicker">Go the distance</div>
+        <div class="name">Twelve Months</div>
+        <div class="format">Forty-eight weekly live sessions over a full year.</div>
+        <div class="price"><span class="cur">$</span><span class="amt">3,597</span></div>
+        <div class="per"><b>Under $300/mo</b> &middot; founding member rate</div>
+        <ul>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Six Months, across a full year in the room</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>The lowest monthly rate we offer</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>A full year of compounding &mdash; the room becomes second nature</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Lifetime access to the asset library &mdash; everything we ever build</li>
+        </ul>
+        <div class="buy">
+          <a class="buy-btn buy-outline" href="https://buy.stripe.com/6oU9ASbvn3W268Y8Qt9MY04" target="_blank" rel="noopener">Reserve my founding seat</a>
           <div class="pay-note">Secure checkout via Stripe</div>
         </div>
       </div>
