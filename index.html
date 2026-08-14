@@ -39,14 +39,13 @@
   a{color:inherit}
   .eyebrow{display:inline-block;font-family:var(--sans);font-size:12.5px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--navy-70)}
 
-  .compass-wm{position:absolute;pointer-events:none}
+  .compass-wm{position:absolute;pointer-events:none;aspect-ratio:1/1;background:url('assets/img/spa-compass-white.png') center/contain no-repeat}
 
-  /* ---------- Brand lockup (official horizontal mark, recreated) ---------- */
+  /* ---------- Brand mark (official logo asset, not a recreation) ---------- */
   .lockup{display:inline-block;line-height:1;text-decoration:none}
-  .lockup .l1{display:flex;align-items:center;font-family:var(--serif);font-weight:900;font-size:17px;letter-spacing:1.5px;color:#fff;white-space:nowrap}
-  .lockup .l1 .o-compass{width:20px;height:20px;margin:0 1px;flex:none}
-  .lockup .l2{display:flex;justify-content:space-between;font-family:var(--sans);font-weight:400;font-size:9px;color:#c7d1e0;margin-top:5px}
-  @media(max-width:600px){.lockup .l1{font-size:15px}.lockup .l1 .o-compass{width:17px;height:17px}.lockup .l2{font-size:8px}}
+  .brandmark{display:block;width:196px;height:auto;max-width:56vw}
+  @media(max-width:600px){.brandmark{width:164px}}
+  @media(max-width:600px){}
 
   /* ---------- Header ---------- */
   header{position:sticky;top:0;z-index:30;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08)}
@@ -160,17 +159,7 @@
 <header>
   <div class="wrap nav">
     <a class="brand lockup" href="#top" aria-label="Starting Point Associates — home">
-      <span class="l1">STARTING&nbsp;P<svg class="o-compass" viewBox="0 0 100 100" aria-hidden="true">
-        <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="7"/>
-        <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
-        <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
-        <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
-        <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
-        <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
-        <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
-        <circle cx="50" cy="50" r="8" fill="#142850" stroke="#fff" stroke-width="5"/>
-      </svg>INT</span>
-      <span class="l2"><span>A</span><span>S</span><span>S</span><span>O</span><span>C</span><span>I</span><span>A</span><span>T</span><span>E</span><span>S</span></span>
+      <img class="brandmark" src="assets/img/spa-logo-horizontal-white.png" width="900" height="168" alt="Starting Point Associates">
     </a>
     <a class="nav-cta" href="#offers">Reserve a seat</a>
   </div>
@@ -178,16 +167,7 @@
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <svg class="compass-wm" viewBox="0 0 100 100" aria-hidden="true">
-    <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="5"/>
-    <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
-    <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
-    <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
-    <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
-    <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
-    <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
-    <circle cx="50" cy="50" r="6" fill="#fff"/>
-  </svg>
+  <div class="compass-wm" aria-hidden="true"></div>
   <div class="wrap hero-inner">
     <span class="eyebrow">Live group sales coaching</span>
     <h1>Stop carrying sales <span class="accent">alone</span>.</h1>
@@ -265,16 +245,7 @@
       <div class="tier feature">
         <span class="badge">Most popular</span>
         <div class="wm-clip">
-          <svg class="compass-wm" viewBox="0 0 100 100" aria-hidden="true">
-            <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="5"/>
-            <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
-            <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
-            <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
-            <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
-            <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
-            <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
-            <circle cx="50" cy="50" r="6" fill="#fff"/>
-          </svg>
+          <div class="compass-wm" aria-hidden="true"></div>
         </div>
         <div class="kicker">All in</div>
         <div class="name">Six Months</div>
@@ -323,16 +294,7 @@
 <section style="padding-top:0">
   <div class="wrap">
     <div class="cta-band">
-      <svg class="compass-wm" viewBox="0 0 100 100" aria-hidden="true">
-        <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="5"/>
-        <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
-        <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
-        <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
-        <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
-        <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
-        <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
-        <circle cx="50" cy="50" r="6" fill="#fff"/>
-      </svg>
+      <div class="compass-wm" aria-hidden="true"></div>
       <h2>The room is forming now.</h2>
       <p>The first seats are open ahead of the first sessions. Founding member pricing holds until the room fills &mdash; after that, it only moves up.</p>
       <a class="btn btn-primary" href="#offers">Become a founding member</a>
@@ -343,17 +305,7 @@
 <footer>
   <div class="wrap foot">
     <span class="lockup">
-      <span class="l1">STARTING&nbsp;P<svg class="o-compass" viewBox="0 0 100 100" aria-hidden="true">
-        <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="7"/>
-        <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
-        <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
-        <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
-        <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
-        <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
-        <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
-        <circle cx="50" cy="50" r="8" fill="#142850" stroke="#fff" stroke-width="5"/>
-      </svg>INT</span>
-      <span class="l2"><span>A</span><span>S</span><span>S</span><span>O</span><span>C</span><span>I</span><span>A</span><span>T</span><span>E</span><span>S</span></span>
+      <img class="brandmark" src="assets/img/spa-logo-horizontal-white.png" width="900" height="168" alt="Starting Point Associates">
     </span>
     <div class="small">Questions? <a href="mailto:jp.rinylo@startingpointassociates.com">Get in touch</a><a class="ig" href="https://www.instagram.com/jprinylo/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg></a></div>
     <div class="small">&copy; 2026 Starting Point Associates</div>

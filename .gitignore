@@ -8,6 +8,15 @@
 !/vip.html
 !/monthly.html
 !/referral.html
-# Reference documents kept with the project (also served at their path):
+# Brand image assets used by the pages. Narrow on purpose: re-ignore the
+# contents of each directory, then allow ONLY the two derived logo files.
+# The source logos/photos in assets/img stay private.
+!/assets/
+/assets/*
+!/assets/img/
+/assets/img/*
+!/assets/img/spa-logo-horizontal-white.png
+!/assets/img/spa-compass-white.png
+# Reference documents kept with the project (excluded from deploy via .vercelignore):
 !/referral/
 !/referral/SPA-referral-quick-reference.pdf
