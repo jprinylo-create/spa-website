@@ -1,0 +1,4 @@
+# Files kept in the repo for reference but NOT published to the live site.
+# The referral one-pager is served as a page (/referral.html); the PDF export
+# is a project reference document and should not be reachable by URL.
+referral/

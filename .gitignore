@@ -3,6 +3,7 @@
 /*
 # ...except what the live site actually needs:
 !/.gitignore
+!/.vercelignore
 !/index.html
 !/vip.html
 !/monthly.html
