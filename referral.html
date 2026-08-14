@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#142850">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23142850'/%3E%3Cg transform='translate(50 50) scale(0.74) translate(-50 -50)'%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23fff' stroke-width='7'/%3E%3Cpath d='M50 0 L58 42 L50 50 L42 42 Z' fill='%23fff'/%3E%3Cpath d='M50 100 L42 58 L50 50 L58 58 Z' fill='%23fff'/%3E%3Cpath d='M0 50 L42 42 L50 50 L42 58 Z' fill='%23fff'/%3E%3Cpath d='M100 50 L58 58 L50 50 L58 42 Z' fill='%23fff'/%3E%3Cpath d='M26 26 L46 40 L40 46 Z' fill='%23fff'/%3E%3Cpath d='M74 26 L60 46 L54 40 Z' fill='%23fff'/%3E%3Cpath d='M26 74 L40 54 L46 60 Z' fill='%23fff'/%3E%3Cpath d='M74 74 L54 60 L60 54 Z' fill='%23fff'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%23142850' stroke='%23fff' stroke-width='5'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<title>Referral Quick-Reference — The Starting Point</title>
+<style>
+  :root {
+    --navy: #142850;
+    --navy-90: #1b3560;
+    --navy-70: #3a5480;
+    --paper: #ffffff;
+    --ground: #eef1f6;
+    --mist: #f4f6f9;
+    --mist-2: #eaeef4;
+    --line: #dde3ec;
+    --muted: #5a6577;
+    --ink: #142850;
+    --on-navy: #ffffff;
+    --on-navy-soft: #c7d1e0;
+    --serif: "Merriweather", Georgia, serif;
+    --sans: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+    margin: 0;
+    padding: 28px 20px 44px;
+    display: flex;
+    justify-content: center;
+    -webkit-font-smoothing: antialiased;
+  }
+  .sheet {
+    width: 100%;
+    max-width: 780px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 26px rgba(20,40,80,.07);
+  }
+
+  /* ---------- Brand lockup (matches site header) ---------- */
+  .lockup { display: block; width: fit-content; line-height: 1; text-decoration: none; }
+  .lockup .l1 {
+    display: flex;
+    align-items: center;
+    font-family: var(--serif);
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .lockup .l1 .o-compass { width: 21px; height: 21px; margin: 0 1px; flex: none; }
+  .lockup .l2 {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 9.5px;
+    color: var(--on-navy-soft);
+    margin-top: 5px;
+  }
+
+  /* ---------- Navy band ---------- */
+  .band {
+    position: relative;
+    background: var(--navy);
+    color: var(--on-navy);
+    padding: 26px 36px 26px;
+    overflow: hidden;
+  }
+  .compass-wm {
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    right: -70px;
+    transform: translateY(-50%);
+    width: 260px;
+    opacity: .07;
+  }
+  .band-inner { position: relative; z-index: 1; }
+  .eyebrow {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--on-navy-soft);
+    margin: 22px 0 8px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-size: 27px;
+    line-height: 1.2;
+    margin: 0 0 11px;
+    color: #fff;
+    text-wrap: balance;
+  }
+  .lede {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e6ebf3;
+    max-width: 62ch;
+    margin: 0;
+    font-weight: 300;
+  }
+  .lede b { color: #fff; font-weight: 500; }
+
+  /* ---------- Body ---------- */
+  .body { padding: 28px 36px 30px; }
+  .label {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--navy-70);
+    margin: 0 0 6px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .label::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  .themes { margin: 0 0 18px; padding: 0; list-style: none; }
+  .themes li {
+    font-size: 14.5px;
+    line-height: 1.45;
+    color: var(--ink);
+    padding: 9px 0 9px 22px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+  }
+  .themes li:last-child { border-bottom: none; }
+  .themes li::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 16px;
+    width: 6px;
+    height: 6px;
+    border: 1.5px solid var(--navy-70);
+    transform: rotate(45deg);
+  }
+  .themes .sub {
+    display: block;
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 1px;
+    font-weight: 300;
+  }
+
+  .bottomline {
+    background: var(--mist);
+    border-left: 3px solid var(--navy);
+    padding: 13px 18px;
+    border-radius: 0 4px 4px 0;
+    margin: 0 0 28px;
+  }
+  .bottomline .tag {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--navy-70);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .bottomline .punch {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--ink);
+    display: block;
+  }
+  .bottomline .tail {
+    display: block;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--muted);
+    margin-top: 5px;
+    font-weight: 300;
+  }
+
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 12px 0 24px;
+  }
+  .col { padding: 17px 20px; }
+  .col + .col { border-left: 1px solid var(--line); }
+  .col .kind {
+    font-family: var(--sans);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--navy-70);
+    margin: 0 0 9px;
+  }
+  .col h3 {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 9px;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .col ul { margin: 0; padding: 0; list-style: none; }
+  .col li {
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: var(--muted);
+    padding: 4px 0 4px 16px;
+    position: relative;
+  }
+  .col li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 5px;
+    height: 5px;
+    border: 1.5px solid var(--navy-70);
+    transform: rotate(45deg);
+  }
+
+  .filter {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin: 0 0 26px;
+    font-weight: 300;
+  }
+  .filter b { color: var(--ink); font-weight: 500; }
+
+  .refer {
+    border-top: 1px solid var(--line);
+    padding-top: 19px;
+    display: flex;
+    gap: 20px;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+  .refer .lab {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--navy-70);
+    flex: 0 0 auto;
+  }
+  .refer p { margin: 0; font-size: 13.5px; line-height: 1.6; color: var(--ink); max-width: 60ch; font-weight: 300; }
+  .refer .say { font-family: var(--serif); font-style: italic; color: var(--ink); font-weight: 400; }
+
+  .foot {
+    margin-top: 18px;
+    padding-top: 13px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .foot .name { font-family: var(--serif); font-size: 13px; color: var(--ink); font-weight: 400; }
+  .foot .name b { font-weight: 700; }
+  .foot .site { font-size: 12px; color: var(--navy-70); font-weight: 500; }
+
+  @media (max-width: 560px) {
+    .split { grid-template-columns: 1fr; }
+    .col + .col { border-left: none; border-top: 1px solid var(--line); }
+    .compass-wm { right: -130px; opacity: .05; }
+  }
+
+  @page { size: letter; margin: 0.45in; }
+  @media print {
+    body { padding: 0; background: #fff; }
+    .sheet { border: none; max-width: none; box-shadow: none; border-radius: 0; zoom: 0.96; }
+
+    .band { padding: 19px 28px 20px; }
+    .compass-wm { width: 205px; right: -55px; }
+    .lockup .l1 { font-size: 16px; }
+    .lockup .l1 .o-compass { width: 19px; height: 19px; }
+    .lockup .l2 { font-size: 8.5px; margin-top: 4px; }
+    .eyebrow { margin: 15px 0 6px; font-size: 10px; }
+    h1 { font-size: 22px; margin-bottom: 8px; }
+    .lede { font-size: 12.5px; line-height: 1.5; }
+
+    .body { padding: 20px 28px 20px; }
+    .label { font-size: 10px; margin-bottom: 4px; }
+    .themes { margin-bottom: 14px; }
+    .themes li { font-size: 12.8px; line-height: 1.35; padding: 6px 0 6px 20px; }
+    .themes li::before { top: 12px; width: 5px; height: 5px; }
+    .themes .sub { font-size: 11.3px; }
+
+    .bottomline { padding: 10px 15px; margin-bottom: 18px; }
+    .bottomline .tag { font-size: 10px; margin-bottom: 3px; }
+    .bottomline .punch { font-size: 14.5px; line-height: 1.35; }
+    .bottomline .tail { font-size: 11.5px; margin-top: 4px; }
+
+    .split { margin: 9px 0 15px; }
+    .col { padding: 13px 16px; }
+    .col .kind { font-size: 9.5px; margin-bottom: 7px; }
+    .col h3 { font-size: 14.5px; margin-bottom: 7px; }
+    .col li { font-size: 11.5px; line-height: 1.38; padding: 3px 0 3px 14px; }
+    .col li::before { top: 9px; }
+
+    .filter { font-size: 11.5px; line-height: 1.5; margin-bottom: 16px; }
+    .refer { padding-top: 14px; gap: 18px; }
+    .refer .lab { font-size: 10px; }
+    .refer p { font-size: 12.5px; line-height: 1.5; }
+    .foot { margin-top: 13px; padding-top: 10px; }
+    .foot .name { font-size: 12px; }
+    .foot .site { font-size: 11px; }
+  }
+</style>
+
+
+</head>
+<body>
+<div class="sheet">
+  <div class="band">
+    <svg class="compass-wm" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="5"/>
+      <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
+      <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
+      <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
+      <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
+      <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
+      <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
+      <circle cx="50" cy="50" r="6" fill="#fff"/>
+    </svg>
+    <div class="band-inner">
+      <span class="lockup">
+        <span class="l1">STARTING&nbsp;P<svg class="o-compass" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="7"/>
+          <path d="M50 0 L58 42 L50 50 L42 42 Z" fill="#fff"/>
+          <path d="M50 100 L42 58 L50 50 L58 58 Z" fill="#fff"/>
+          <path d="M0 50 L42 42 L50 50 L42 58 Z" fill="#fff"/>
+          <path d="M100 50 L58 58 L50 50 L58 42 Z" fill="#fff"/>
+          <path d="M26 26 L46 40 L40 46 Z" fill="#fff"/><path d="M74 26 L60 46 L54 40 Z" fill="#fff"/>
+          <path d="M26 74 L40 54 L46 60 Z" fill="#fff"/><path d="M74 74 L54 60 L60 54 Z" fill="#fff"/>
+          <circle cx="50" cy="50" r="8" fill="#142850" stroke="#fff" stroke-width="5"/>
+        </svg>INT</span>
+        <span class="l2"><span>A</span><span>S</span><span>S</span><span>O</span><span>C</span><span>I</span><span>A</span><span>T</span><span>E</span><span>S</span></span>
+      </span>
+
+      <span class="eyebrow">Referral Quick-Reference</span>
+      <h1>Who to send my way</h1>
+      <p class="lede">I give founders the kind of sales expertise usually reserved for the <b>pipeline calls inside established sales teams</b>. Most are building the plane while flying it. I help them stop betting revenue on skills they are still learning in real time.</p>
+    </div>
+  </div>
+
+  <div class="body">
+    <p class="label">Common themes to listen for</p>
+    <ul class="themes">
+      <li>They drive and close every deal themselves</li>
+      <li>They can't hand sales off</li>
+      <li>They're surviving off their own referrals and network</li>
+      <li>They've hired and fired reps on repeat</li>
+      <li>Sales feels hard, or they think they're bad at it and hate doing it</li>
+      <li>They've tried all the gurus and still feel stuck
+        <span class="sub">Courses, books, podcasts, and none of it translates to their own deals</span>
+      </li>
+    </ul>
+
+    <p class="bottomline">
+      <span class="tag">Bottom line</span>
+      <span class="punch">They feel like they suck at sales, and they want to suck less.</span>
+      <span class="tail">Until that changes, they're the ceiling on their own growth.</span>
+    </p>
+
+    <p class="label">Which door fits</p>
+    <div class="split">
+      <div class="col">
+        <p class="kind">Group</p>
+        <h3>The Starting Point room</h3>
+        <ul>
+          <li>Wants an ongoing expert in their corner, not a one-time fix</li>
+          <li>Would gain from seeing other founders' real deals worked in real time, not just their own</li>
+          <li>Feels alone in sales and wants a room of peers in it with them</li>
+        </ul>
+      </div>
+      <div class="col">
+        <p class="kind">Private</p>
+        <h3>One-on-one coaching</h3>
+        <ul>
+          <li>Needs a guide on a regular basis, not a one-time fix</li>
+          <li>Needs help executing and someone holding them to it between calls</li>
+          <li>Needs more access, not more time</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="filter"><b>Probably not a fit:</b> quick lead-gen hacks, done-for-you agencies, companies just hiring a VP of Sales, employees who don't own the number, or pre-revenue with nothing to sell yet.</p>
+
+    <div class="refer">
+      <span class="lab">How to refer</span>
+      <p>No need to pitch, explain the program, or quote a price. Just say, <span class="say">"I know someone who has lived exactly this. Want me to introduce you?"</span> If they say yes, connect us over email or text. I'll take it from there and find them the right door.</p>
+    </div>
+
+    <div class="foot">
+      <span class="name"><b>JP Rinylo</b>, Starting Point Associates</span>
+      <span class="site">startingpointassociates.com</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
