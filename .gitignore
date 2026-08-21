@@ -8,6 +8,7 @@
 !/vip.html
 !/monthly.html
 !/referral.html
+!/elite.html
 # Brand image assets used by the pages. Narrow on purpose: re-ignore the
 # contents of each directory, then allow ONLY the two derived logo files.
 # The source logos/photos in assets/img stay private.
