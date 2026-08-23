@@ -66,7 +66,7 @@
   .section-head{max-width:60ch;margin:0 auto 44px;text-align:center}
   .section-head .eyebrow{margin-bottom:16px}
   .section-head h2 em{font-style:italic;font-weight:700}
-  .section-head h2{font-weight:700;font-size:clamp(1.7rem,3.6vw,2.4rem);letter-spacing:-.4px;line-height:1.18;color:var(--navy)}
+  .section-head h2{text-wrap:balance;font-weight:700;font-size:clamp(1.7rem,3.6vw,2.4rem);letter-spacing:-.4px;line-height:1.18;color:var(--navy)}
   .section-head p{color:var(--muted);margin-top:18px;font-size:1.08rem;font-weight:300}
 
   /* ---------- The seat ---------- */
@@ -98,9 +98,10 @@
   .buy-btn:focus-visible{outline:3px solid #8ea3c4;outline-offset:3px}
   .pay-note{text-align:center;font-size:12px;color:#9fb0cb;margin-top:12px;font-weight:300;position:relative;z-index:2}
 
-  /* ---------- Urgency ---------- */
-  .urgency{text-align:center;max-width:44ch;margin:40px auto 0;padding-top:30px;border-top:1px solid var(--line);font-family:var(--serif);font-weight:700;font-size:clamp(1.05rem,2.6vw,1.25rem);color:var(--navy);letter-spacing:-.2px;line-height:1.45}
-  .urgency-sub{text-align:center;color:var(--muted);font-size:.95rem;font-weight:300;margin:12px auto 0;max-width:46ch}
+  /* ---------- TL;DR band ---------- */
+  .tldr{padding:74px 0 66px}
+  .tldr .section-head{margin-bottom:0}
+  .tldr .section-head h2{font-size:clamp(1.5rem,3.1vw,2.05rem)}
 
   /* ---------- Footer ---------- */
   footer{background:var(--navy);color:#9fb0cb;padding:44px 0}
@@ -124,10 +125,22 @@
 <section class="hero">
   <div class="compass-wm" aria-hidden="true"></div>
   <div class="wrap hero-inner">
-    <span class="eyebrow">Open through August&nbsp;31</span>
+    <span class="eyebrow">A Special Invitation</span>
     <h1>You&rsquo;ve seen how the room <span class="accent">works</span>.</h1>
     <p class="lede">This is the rate for founders who don&rsquo;t need convincing.</p>
     <p class="hero-note">Six months in The Starting Point, alongside other Elite founders.</p>
+  </div>
+</section>
+
+<!-- WHAT THIS IS -->
+<section class="tldr">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What this is</span>
+      <h2>A private rate reserved for the Elite community only. Open through August&nbsp;31.</h2>
+      <p>This is for those from Elite who attended a session, and want to stay in the room. It is not a discount. It&rsquo;s an Elite community benefit for people all on the same journey who need that deeper discussion about their challenges with sales.</p>
+      <p>On September 1 the founding rates rise, and this one rises with them.</p>
+    </div>
   </div>
 </section>
 
@@ -166,9 +179,6 @@
         <div class="pay-note">Secure checkout via Stripe</div>
       </div>
     </div>
-
-    <p class="urgency">Founding member rate. Elite members only. Open through August&nbsp;31.</p>
-    <p class="urgency-sub">Held for Elite members who have already sat in a session. Not a discount, but what being in the room together is worth. On September 1 the founding rates rise, and this one rises with them.</p>
   </div>
 </section>
 
