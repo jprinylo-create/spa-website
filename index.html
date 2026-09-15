@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Starting Point Associates — A Live Sales Coaching Room for Founders</title>
-<meta name="description" content="A live group coaching room for founders, owner-operators, and leaders who need an extra set of ears on sales. One room — you choose how long you stay.">
+<meta name="description" content="A live group coaching room for founders, owner-operators, and leaders who need an extra set of ears on sales. The site and pricing are being refreshed this week.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23142850'/%3E%3Cg transform='translate(50 50) scale(0.74) translate(-50 -50)'%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23fff' stroke-width='7'/%3E%3Cpath d='M50 0 L58 42 L50 50 L42 42 Z' fill='%23fff'/%3E%3Cpath d='M50 100 L42 58 L50 50 L58 58 Z' fill='%23fff'/%3E%3Cpath d='M0 50 L42 42 L50 50 L42 58 Z' fill='%23fff'/%3E%3Cpath d='M100 50 L58 58 L50 50 L58 42 Z' fill='%23fff'/%3E%3Cpath d='M26 26 L46 40 L40 46 Z' fill='%23fff'/%3E%3Cpath d='M74 26 L60 46 L54 40 Z' fill='%23fff'/%3E%3Cpath d='M26 74 L40 54 L46 60 Z' fill='%23fff'/%3E%3Cpath d='M74 74 L54 60 L60 54 Z' fill='%23fff'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%23142850' stroke='%23fff' stroke-width='5'/%3E%3C/g%3E%3C/svg%3E">
 <meta name="theme-color" content="#142850">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,6 +55,30 @@
   .nav-cta:hover{background:var(--mist-2)}
   @media(max-width:600px){.nav-cta{padding:9px 15px;font-size:13px}}
 
+  /* ---------- Refresh band (top of page) ---------- */
+  .refresh{position:relative;overflow:hidden;background:var(--mist-2);border-bottom:1px solid var(--line);padding:40px 0 42px}
+  .refresh::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(-45deg,rgba(20,40,80,.05) 0 14px,transparent 14px 28px)}
+  .refresh-inner{position:relative;z-index:2;max-width:64ch;margin:0 auto;text-align:center}
+  .refresh-tag{display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 16px}
+  .refresh-dot{width:7px;height:7px;border-radius:50%;background:var(--navy);animation:pulse 1.9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+  @media(prefers-reduced-motion:reduce){.refresh-dot{animation:none}}
+  .refresh h2{font-size:clamp(1.45rem,3.4vw,2.1rem);font-weight:900;color:var(--navy);letter-spacing:-.4px;line-height:1.2;margin:18px 0 12px}
+  .refresh p{color:#41506b;font-weight:300;font-size:1.04rem;line-height:1.6}
+  @media(max-width:600px){.refresh{padding:32px 0 34px}.refresh p{font-size:.98rem}}
+
+  /* ---------- Work-zone ribbon across the pricing ---------- */
+  .tiers-wrap{position:relative}
+  .tiers-wrap .tiers{opacity:.62}
+  .ribbon{position:absolute;left:-8%;right:-8%;top:50%;z-index:6;pointer-events:none;transform:translateY(-50%) rotate(-3.2deg);background:var(--navy);color:#fff;padding:15px 0;overflow:hidden;white-space:nowrap;box-shadow:0 14px 40px rgba(20,40,80,.28);border-top:1px solid rgba(255,255,255,.22);border-bottom:1px solid rgba(255,255,255,.22)}
+  .ribbon span{font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:4.5px;text-transform:uppercase}
+  @media(max-width:600px){.ribbon{padding:12px 0}.ribbon span{font-size:11.5px;letter-spacing:3px}}
+  .price.is-muted,.per.is-muted{opacity:.4;filter:grayscale(1)}
+  .price.is-struck{position:relative;display:inline-flex;width:fit-content;align-self:flex-start}
+  .price.is-struck::after{content:"";position:absolute;left:-5px;right:-5px;top:52%;height:2.5px;background:currentColor;border-radius:2px;transform:rotate(-4deg)}
+  .buy-btn.is-disabled{background:var(--mist-2);color:#97a1b1;border-color:var(--line);cursor:not-allowed;pointer-events:none;box-shadow:none;transform:none}
+  .tier.feature .buy-btn.is-disabled{background:rgba(255,255,255,.08);color:#7e8ea8;border-color:rgba(255,255,255,.18)}
+
   /* ---------- Hero ---------- */
   .hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;padding:100px 0 96px}
   .hero .compass-wm{top:50%;right:-120px;transform:translateY(-50%);width:600px;opacity:.07}
@@ -83,7 +107,7 @@
   .room-note{text-align:center;margin:0 auto;max-width:52ch;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--navy)}
 
   /* ---------- Tiers ---------- */
-  .offers{background:var(--mist)}
+  .offers{background:var(--mist);overflow:hidden}
   .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;max-width:1080px;margin:0 auto}
   @media(max-width:980px){.tiers{grid-template-columns:1fr;max-width:470px;margin:0 auto}}
   .tier{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:38px 28px 40px;display:flex;flex-direction:column;box-shadow:var(--shadow);position:relative;transition:.22s}
@@ -161,9 +185,20 @@
     <a class="brand lockup" href="#top" aria-label="Starting Point Associates — home">
       <img class="brandmark" src="assets/img/spa-logo-horizontal-white.png" width="900" height="168" alt="Starting Point Associates">
     </a>
-    <a class="nav-cta" href="#offers">Reserve a seat</a>
+    <a class="nav-cta" href="mailto:jp.rinylo@startingpointassociates.com?subject=The%20Starting%20Point">Get in touch</a>
   </div>
 </header>
+
+<!-- REFRESH BAND -->
+<section class="refresh">
+  <div class="wrap">
+    <div class="refresh-inner">
+      <span class="refresh-tag"><span class="refresh-dot" aria-hidden="true"></span>Refresh in progress</span>
+      <h2>I&rsquo;m rebuilding this page this week.</h2>
+      <p>It&rsquo;s going to be a lot clearer about what I actually do and how working with me works. Pricing is going up when the new page goes live, so what&rsquo;s below is the old pricing. Checkout is off until then.</p>
+    </div>
+  </div>
+</section>
 
 <!-- HERO -->
 <section class="hero" id="top">
@@ -173,8 +208,7 @@
     <h1>Stop carrying sales <span class="accent">alone</span>.</h1>
     <p class="lede">The Starting Point is a live coaching room for founders, owner-operators, and leaders working through the day-to-day of sales. Bring whatever&rsquo;s in front of you this week — a live deal, a prospect you can&rsquo;t read, a hiring decision you keep circling — and do a gut check before you act.</p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="#offers">Reserve your seat</a>
-      <a class="btn btn-ghost" href="#room">What happens in the room</a>
+      <a class="btn btn-primary" href="#room">What happens in the room</a>
     </div>
     <p class="hero-note">One room. Every session live. You choose how long you stay.</p>
   </div>
@@ -217,27 +251,28 @@
 <section class="offers" id="offers">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Founding member pricing</span>
+      <span class="eyebrow">Pricing is being refreshed</span>
       <h2>One room. Three ways in.</h2>
-      <p>Same weekly room, same sessions, same seat &mdash; you&rsquo;re choosing how long you stay and how much compounds while you&rsquo;re there. Founding rates hold until the first room fills. Then they rise.</p>
+      <p>Same weekly room, same sessions, same seat. You&rsquo;re choosing how long you stay and how much compounds while you&rsquo;re there.</p>
     </div>
 
+    <div class="tiers-wrap">
+      <div class="ribbon" aria-hidden="true"><span>New pricing this week &nbsp;&middot;&nbsp; New pricing this week &nbsp;&middot;&nbsp; New pricing this week &nbsp;&middot;&nbsp; New pricing this week &nbsp;&middot;&nbsp; New pricing this week &nbsp;&middot;&nbsp; New pricing this week &nbsp;&middot;&nbsp; New pricing this week &nbsp;&middot;&nbsp; New pricing this week &nbsp;&middot;&nbsp; </span></div>
     <div class="tiers">
       <!-- Three Months -->
       <div class="tier">
         <div class="kicker">Settle in</div>
         <div class="name">Three Months</div>
         <div class="format">Twelve weekly live sessions over three months.</div>
-        <div class="price"><span class="cur">$</span><span class="amt">1,197</span></div>
-        <div class="per"><b>$399/mo</b> &middot; founding member rate</div>
+        <div class="price is-muted is-struck"><span class="cur">$</span><span class="amt">1,197</span></div>
+        <div class="per is-muted"><b>$399/mo</b> &middot; founding member rate</div>
         <ul>
           <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Enough runway to work a real problem to done</li>
           <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>The room adjusts as you grow</li>
           <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Access to the asset library while you&rsquo;re in &mdash; frameworks, worksheets, recordings, built in real time</li>
         </ul>
         <div class="buy">
-          <a class="buy-btn buy-outline" href="https://buy.stripe.com/bJe14meHzbou7d27Mp9MY01" target="_blank" rel="noopener">Hold your seat</a>
-          <div class="pay-note">Secure checkout via Stripe</div>
+          <a class="buy-btn buy-outline is-disabled" aria-disabled="true" role="link">Checkout reopens this week</a>
         </div>
       </div>
 
@@ -250,8 +285,8 @@
         <div class="kicker">All in</div>
         <div class="name">Six Months</div>
         <div class="format">Twenty-four weekly live sessions over six months.</div>
-        <div class="price"><span class="cur">$</span><span class="amt">1,997</span></div>
-        <div class="per"><b>$333/mo</b> &middot; founding member rate</div>
+        <div class="price is-muted is-struck"><span class="cur">$</span><span class="amt">1,997</span></div>
+        <div class="per is-muted"><b>$333/mo</b> &middot; founding member rate</div>
         <ul>
           <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Three Months, with twice the runway</li>
           <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>A private 1-on-1 origin-tracing session with JP</li>
@@ -259,8 +294,7 @@
           <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Peers who know your story and hold you to it</li>
         </ul>
         <div class="buy">
-          <a class="buy-btn buy-solid" href="https://buy.stripe.com/cNibJ056ZdwC9la6Il9MY02" target="_blank" rel="noopener">Reserve my founding seat</a>
-          <div class="pay-note">Secure checkout via Stripe</div>
+          <a class="buy-btn buy-solid is-disabled" aria-disabled="true" role="link">Checkout reopens this week</a>
         </div>
       </div>
 
@@ -269,8 +303,8 @@
         <div class="kicker">Go the distance</div>
         <div class="name">Twelve Months</div>
         <div class="format">Forty-eight weekly live sessions over a full year.</div>
-        <div class="price"><span class="cur">$</span><span class="amt">3,597</span></div>
-        <div class="per"><b>Under $300/mo</b> &middot; founding member rate</div>
+        <div class="price is-muted is-struck"><span class="cur">$</span><span class="amt">3,597</span></div>
+        <div class="per is-muted"><b>Under $300/mo</b> &middot; founding member rate</div>
         <ul>
           <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Six Months, across a full year in the room</li>
           <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>The lowest monthly rate we offer</li>
@@ -278,10 +312,10 @@
           <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Lifetime access to the asset library &mdash; everything we ever build</li>
         </ul>
         <div class="buy">
-          <a class="buy-btn buy-outline" href="https://buy.stripe.com/6oU9ASbvn3W268Y8Qt9MY04" target="_blank" rel="noopener">Reserve my founding seat</a>
-          <div class="pay-note">Secure checkout via Stripe</div>
+          <a class="buy-btn buy-outline is-disabled" aria-disabled="true" role="link">Checkout reopens this week</a>
         </div>
       </div>
+    </div>
     </div>
 
     <p class="ladder-note">Everything in the asset library gets built by this first room, in real time. Founding members shape what it becomes.</p>
@@ -295,9 +329,9 @@
   <div class="wrap">
     <div class="cta-band">
       <div class="compass-wm" aria-hidden="true"></div>
-      <h2>The room is forming now.</h2>
-      <p>The first seats are open ahead of the first sessions. Founding member pricing holds until the room fills &mdash; after that, it only moves up.</p>
-      <a class="btn btn-primary" href="#offers">Become a founding member</a>
+      <h2>Check back in a few days.</h2>
+      <p>The new page goes up this week. If you&rsquo;d rather not wait on it, get in touch.</p>
+      <a class="btn btn-primary" href="mailto:jp.rinylo@startingpointassociates.com?subject=The%20Starting%20Point">Get in touch</a>
     </div>
   </div>
 </section>
