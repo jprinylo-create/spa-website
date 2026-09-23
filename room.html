@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About JP Rinylo : Starting Point Associates</title>
-<meta name="description" content="Fifteen years, $75M sold personally, first sales hire at five companies. Why I built The Starting Point.">
+<title>The Starting Point: Sales Coaching for People Who Were Never Taught How</title>
+<meta name="description" content="A weekly live room for founders, owners and leaders doing their own selling. Bring a real deal, work it with peers. Tuesdays at 1:30pm ET.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23142850'/%3E%3Cg transform='translate(50 50) scale(0.74) translate(-50 -50)'%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23fff' stroke-width='7'/%3E%3Cpath d='M50 0 L58 42 L50 50 L42 42 Z' fill='%23fff'/%3E%3Cpath d='M50 100 L42 58 L50 50 L58 58 Z' fill='%23fff'/%3E%3Cpath d='M0 50 L42 42 L50 50 L42 58 Z' fill='%23fff'/%3E%3Cpath d='M100 50 L58 58 L50 50 L58 42 Z' fill='%23fff'/%3E%3Cpath d='M26 26 L46 40 L40 46 Z' fill='%23fff'/%3E%3Cpath d='M74 26 L60 46 L54 40 Z' fill='%23fff'/%3E%3Cpath d='M26 74 L40 54 L46 60 Z' fill='%23fff'/%3E%3Cpath d='M74 74 L54 60 L60 54 Z' fill='%23fff'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%23142850' stroke='%23fff' stroke-width='5'/%3E%3C/g%3E%3C/svg%3E">
 <meta name="theme-color" content="#142850">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -146,8 +146,9 @@
   .plan.feature .buy-btn{background:#fff;border-color:#fff}
   .plan.feature .buy-btn:hover{background:var(--mist-2)}
   .save-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;padding:6px 16px;border-radius:999px;border:1.5px solid #fff;white-space:nowrap}
-  .why-quarter{max-width:60ch;margin:44px auto 0;text-align:center;color:var(--muted);font-weight:300;font-size:1rem}
-  .why-quarter b{color:var(--navy);font-weight:700}
+  .why-term{max-width:60ch;margin:44px auto 0;text-align:center;color:var(--muted);font-weight:300;font-size:1rem}
+  .why-term b{color:var(--navy);font-weight:700}
+  .prose p.cite{font-size:.83rem;color:var(--muted);font-weight:300;margin-top:30px;padding-top:16px;border-top:1px solid var(--line);line-height:1.5}
 
   footer{background:var(--navy);color:#9fb0cb;padding:46px 0}
   .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
@@ -170,17 +171,6 @@
   .nav-social a:hover{color:#fff}
   .nav-social svg{width:20px;height:20px;display:block}
   @media(max-width:760px){.nav-social{margin-left:0;margin-right:0;gap:16px}}
-  .whoami{background:var(--mist);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .whoami p{max-width:44ch;margin:0 auto;text-align:center;font-family:var(--serif);font-size:clamp(1.12rem,2.4vw,1.4rem);line-height:1.55;color:var(--navy)}
-  .ways{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:880px;margin:0 auto}
-  @media(max-width:760px){.ways{grid-template-columns:1fr;max-width:440px}}
-  .way{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow);display:flex;flex-direction:column}
-  .way h3{font-family:var(--serif);font-size:1.4rem;font-weight:900;color:var(--navy);margin-bottom:8px}
-  .way .kind{font-size:11.5px;font-weight:700;letter-spacing:1.7px;text-transform:uppercase;color:var(--navy-70);margin-bottom:10px}
-  .way p{font-weight:300;font-size:1rem;color:#3a4656;line-height:1.55;margin-bottom:16px}
-  .way .meta{font-size:13px;color:var(--muted);margin-bottom:20px}
-  .way .meta b{color:var(--navy);font-weight:700}
-  .way .go{margin-top:auto}
   .foot-links{display:flex;gap:20px;flex-wrap:wrap}
   /* ---------- Testimonial card (one component, used everywhere) ---------- */
   .tq{position:relative;max-width:64ch;margin:46px auto 0;background:#fff;border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:var(--radius);padding:34px 34px 28px;box-shadow:var(--shadow)}
@@ -196,20 +186,24 @@
   .pillars .tq .who{color:#fff;border-top-color:rgba(255,255,255,.22)}
   .pillars .tq .role{color:#9fb0cb}
 
-  .h-setup{font-weight:300;font-size:1.08rem;color:#cdd6e4;line-height:1.65;margin:26px 0 16px;max-width:54ch}
-  .h-setup b{color:#fff;font-weight:700}
-  .h-turn{font-family:var(--serif);font-style:italic;font-weight:700;font-size:1.22rem;color:#fff;line-height:1.45;max-width:46ch;margin-bottom:28px}
-  .h-turn em{font-family:var(--serif);font-style:italic;font-weight:700;color:#fff}
-  .h-payoff{font-weight:300;font-size:1.08rem;color:#cdd6e4;line-height:1.65;max-width:54ch;padding-top:22px;border-top:1px solid rgba(255,255,255,.18)}
-  .h-payoff b{color:#fff;font-weight:700}
-  .hero-split{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center;max-width:var(--maxw)}
-  @media(max-width:860px){.hero-split{grid-template-columns:1fr;gap:34px}}
-  .portrait{width:100%;height:auto;max-width:380px;border-radius:18px;display:block;box-shadow:0 22px 60px rgba(0,0,0,.34)}
-  @media(max-width:860px){.portrait{max-width:260px;margin:0 auto}}
-  .pillar-grid.stats-grid{grid-template-columns:repeat(4,1fr);gap:18px}
-  .stats-grid .pillar{text-align:center;padding:26px 16px}
-  @media(max-width:820px){.pillar-grid.stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}}
-  @media(max-width:420px){.pillar-grid.stats-grid{grid-template-columns:1fr}}
+  .cost-list{max-width:64ch;margin:0 auto;list-style:none;display:grid;gap:20px}
+  .cost-list li{position:relative;padding-left:34px;font-size:1.06rem;font-weight:300;color:#3a4656}
+  .cost-list li:before{content:"";position:absolute;left:4px;top:.62em;width:14px;height:2px;background:var(--navy);opacity:.45}
+  .cost-list li b{font-weight:700;color:var(--navy)}
+  .ff{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:960px;margin:0 auto;align-items:stretch}
+  @media(max-width:820px){.ff{grid-template-columns:1fr;max-width:520px}}
+  .ff-card{border-radius:var(--radius);padding:34px 30px;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}
+  .ff-card.no{background:var(--navy);border-color:var(--navy);color:#fff}
+  .ff-card .lead{font-family:var(--serif);font-size:1.3rem;font-weight:900;color:var(--navy);line-height:1.3;margin-bottom:20px}
+  .ff-card.no .lead{color:#fff}
+  .ff-card ul{list-style:none;display:grid;gap:11px;margin:0}
+  .ff-card li{position:relative;padding-left:22px;font-weight:300;font-size:1rem;line-height:1.5;color:#3a4656}
+  .ff-card li:before{content:"";position:absolute;left:0;top:.62em;width:10px;height:2px;background:var(--navy);opacity:.5}
+  .ff-card.no li{color:#dbe4ee}
+  .ff-card.no li:before{background:#fff;opacity:.55}
+  .ff-card .closer{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--serif);font-style:italic;font-size:1.06rem;line-height:1.5;color:var(--navy)}
+  .ff-card.no .closer{color:#fff;border-top-color:rgba(255,255,255,.22)}
+  .ff-card.no .closer{font-family:var(--serif);font-style:italic}
 </style>
 </head>
 <body>
@@ -221,9 +215,9 @@
     </a>
     <nav class="nav-links">
       <a href="index.html">Home</a>
-      <a href="room.html">The Room</a>
+      <a href="room.html" class="on">The Room</a>
       <a href="advisory.html">Private Advisory</a>
-      <a href="about.html" class="on">About</a>
+      <a href="about.html">About</a>
     </nav>
     <div class="nav-social">
       <a href="mailto:jp.rinylo@startingpointassociates.com" aria-label="Email JP" title="Email JP">
@@ -240,128 +234,241 @@
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="compass-wm" aria-hidden="true"></div>
-  <div class="wrap hero-split">
-    <div>
-      <span class="eyebrow">About</span>
-      <h1>I asked a room full of executives to finish this sentence. &ldquo;Sales is&hellip;&rdquo;</h1>
-      <p class="h-setup">The answers I got?</p>
-      <p class="h-setup"><b>Money&hellip; revenue&hellip; winning.</b></p>
-      <p class="h-setup">This Mad Libs exercise was something I did with the executive leaders in one of my early sales leadership roles.</p>
-      <p class="h-setup">Each of the leaders&rsquo; answers focused on an outcome.<br>
-      Not one of them mentioned the work needed to earn it.</p>
-      <p class="h-turn">That&rsquo;s the flaw. The stereotype of sales expects the outcome and ignores the work.</p>
-      <p class="h-payoff">I didn&rsquo;t know it at the time, but <b>the philosophical change that occurred in that room</b> led to the foundation I&rsquo;ve built in this business.</p>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">The Starting Point</span>
+<h1>A sales pipeline meeting without the pipeline pressure.</h1>
+    <p class="lede">This is a weekly room for founders and professionals who do their own selling. You bring a live deal or a real challenge, and we work the thinking that comes before any tactic.</p>
+    <div class="hero-meta">
+      <span><b>Tuesdays at 1:30pm ET</b></span>
+      <span>Every session live</span>
+      <span>No curriculum. No graduation.</span>
     </div>
-    <div>
-      <img class="portrait" src="assets/img/jp-portrait.webp" alt="JP Rinylo" width="900" height="1000" loading="eager">
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#pricing">See the two ways in</a>
+      <a class="btn btn-ghost" href="#pillars">What we work on</a>
     </div>
   </div>
 </section>
 
-<!-- WHO I AM -->
-<section class="whoami" style="padding:56px 0">
-  <div class="wrap">
-    <p>Husband to a wife I still date, father to two kids that keep me young, Jersey guy with Philly roots, golfer on a mission to break 80, car guy who drives cars meant to be driven, weekend tinkerer, CrossFit coach, dog dad, and the last person you want to tell something can&rsquo;t be done.</p>
-  </div>
-</section>
-
-<!-- THE STORY -->
+<!-- THE PROBLEM -->
 <section>
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">How I got here</span>
-      <h2>Nobody, not even me, could have known what was happening.</h2>
+      <span class="eyebrow">Why most first-timers in sales struggle</span>
+      <h2>You aren&rsquo;t taught to sell until you have to do it.</h2>
     </div>
     <div class="prose">
-      <p>For fifteen years I was the guy companies called when they needed revenue. I was good at it. Really good.</p>
-      <p>I performed. Closed deals, showed up, delivered. Nobody looking from the outside would have seen it coming.</p>
-      <p>But when my wife was diagnosed with breast cancer in 2016, I went into machine mode. Held everything together. Felt nothing. Kept producing. And I was good at it&hellip; that was the problem.</p>
-      <p>Meanwhile, at work, I was carrying revenue in an environment that was quietly shifting underneath me. A leadership structure that changed without warning. A sales philosophy that clashed with everything I knew to be true. People leaving one by one. And leadership that made it clear my wellbeing was not their problem.</p>
-      <p class="beat">I stayed anyway. Because leaving felt like failure.</p>
-      <p>When my wife recovered, my body finally sent the bill. Thirty to forty pounds. Hair falling out. Depression I didn&rsquo;t have a name for yet. Eventually a Hashimoto&rsquo;s diagnosis that explained everything and nothing at the same time.</p>
-      <p>I wasn&rsquo;t burned out from weakness. I was burned out from being too good at holding it together for too long&hellip; at home and at work&hellip; in places that were never going to hold me up.</p>
-      <p class="beat">At some point I stopped pretending the cost wasn&rsquo;t real. That&rsquo;s when everything changed.</p>
+      <p>You learn by doing, by watching, by winging it. By taking an online course, or subscribing to a YouTube channel. Following that path often leads to believing that sales is either a gift you have naturally, or a skill you have to master in the words you say and the tactics you memorize.</p>
+      <p class="beat">Neither is true.</p>
+      <p>You can learn all of the tricks and all of the tactics and all of the frameworks you want, and you will still have that little voice in your head. The one that challenges your thinking, questions your rationale, doubts your confidence, and dilutes your value right when you need it most.</p>
+      <p>The Starting Point was built to eliminate that noise. It is a peer supported and expert supported space to practice the real thing, with people who are doing the same work you are.</p>
+    </div>
+
+    <div class="tq">
+      <p>&ldquo;The calls are literally the best part of my week, because I feel like I&rsquo;m not alone in my deals.&rdquo;</p>
+      <div class="who">Sorina Dumitru<span class="role">Founder, DFH Equity Advisory &middot; Cofounder, CFO NuMoney</span></div>
     </div>
   </div>
 </section>
 
-<!-- WHAT I DID -->
-<section class="pull" style="padding:74px 0">
+<!-- COST OF THE GAP -->
+<section style="padding-top:0">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">What I did about it</span>
-      <h2>First time I ever quit anything.</h2>
+      <span class="eyebrow">What it&rsquo;s costing you</span>
+      <h2>Figuring out sales alone is not free. You&rsquo;re paying for it right now.</h2>
     </div>
-    <div class="prose">
-      <p>So I made the decision I&rsquo;d been avoiding for years&hellip; In March 2024, on my son&rsquo;s 12th birthday, I quit.</p>
-      <p>I landed somewhere new within weeks. Same industry, different door. And within six months I could see the same story starting to unfold. Different cast, same script.</p>
-      <p class="beat">That&rsquo;s when I knew it wasn&rsquo;t bad luck.</p>
-      <p>I walked away from that one too. And this time I didn&rsquo;t run toward anything.</p>
-      <p>I spent the next few months sitting with what I actually knew. Not what I&rsquo;d been hired to do. What I actually understood that nobody had ever paid me to own.</p>
-      <p>And it was this: most founders don&rsquo;t have a sales problem. They have a foundation problem. And you can&rsquo;t hire your way out of it.</p>
-      <p class="beat">I was done raising someone else&rsquo;s kids.</p>
-      <p>Starting Point Associates started in December 2024.</p>
+    <ul class="cost-list">
+      <li><b>Deals take longer.</b> Revenue you have already earned sits waiting to be recognized while a deal drags out for reasons nobody named.</li>
+      <li><b>You stay unready to hire for sales.</b> So when you finally do, the hire fails, and you walk away believing you can&rsquo;t hire for sales.</li>
+      <li><b>You stay capped at your own ability.</b> The business cannot grow past the best seller in it, and right now that is you.</li>
+      <li><b>The people you&rsquo;d hand this to never get a fair shot.</b> You can&rsquo;t set someone up to succeed at something you can&rsquo;t explain.</li>
+      <li><b>And your clients miss the best thing you could give them.</b> Being sold to by someone who knows what they&rsquo;re doing is the highest form of service there is.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PULL -->
+<section class="pull">
+  <div class="wrap">
+    <div class="tq" style="margin-top:0">
+      <p>&ldquo;This is a goldmine. Twenty minutes in and I was already rethinking how we sell.&rdquo;</p>
+      <div class="who">David McKernan<span class="role">Founder, Limitless Technical Solutions</span></div>
     </div>
   </div>
 </section>
 
-<!-- STATS -->
-<section class="pillars">
+<!-- JP -->
+<section class="jp">
+  <div class="wrap">
+    <div class="jp-card">
+      <span class="eyebrow" style="margin-bottom:20px">The expert in the room</span>
+      <p class="jp-line">I&rsquo;m not teaching you cheap sales tactics I picked up in an online course or an objection handling mastermind&hellip; I closed over $75 million in fifteen years and lost probably 2-3x as much&hellip; and I&rsquo;m bringing all of the lessons learned, both the good and the bad, to the table each week.</p>
+      <div class="jp-who">JP Rinylo, founder</div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="pillars" id="pillars">
   <div class="compass-wm" aria-hidden="true"></div>
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">The track record</span>
-      <h2>Ground floor to the executive suite.</h2>
-      <p>I was the first sales hire at five companies that went on to 3x, 5x and 7x their revenues.</p>
+      <span class="eyebrow">The four pillars</span>
+      <h2>Every challenge brought into this room lives inside one of four areas.</h2>
+      <p>They are not stages you move through in order. They are lenses. Whichever one reveals the pattern fastest is where we start.</p>
     </div>
-    <div class="pillar-grid stats-grid">
-      <div class="pillar"><div class="num" style="color:#fff">15</div><p style="margin-top:8px">Years in sales and professional services</p></div>
-      <div class="pillar"><div class="num" style="color:#fff">$75M</div><p style="margin-top:8px">Sold personally</p></div>
-      <div class="pillar"><div class="num" style="color:#fff">5</div><p style="margin-top:8px">Companies where I was the first sales hire</p></div>
-      <div class="pillar"><div class="num" style="color:#fff">3</div><p style="margin-top:8px">Of those five founders went on to exit</p></div>
+
+    <div class="pillar-grid">
+      <div class="pillar">
+        <div class="num">1</div>
+        <h3>You</h3>
+        <div class="tags">Identity &middot; Conviction &middot; Anchor</div>
+        <p>Before you can sell anything, you have to know who you are when you&rsquo;re selling. Not the version of you that&rsquo;s trying to close a deal. The one that genuinely cares whether the person across from you gets helped or not. That&rsquo;s your anchor. Without it, every hard moment in a conversation has nothing to hold onto.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="num">2</div>
+        <h3>Your Buyer</h3>
+        <div class="tags">Motivations &middot; Intentions &middot; Awareness</div>
+        <p>Professional sellers don&rsquo;t pitch. They diagnose. Before you try to move someone, you have to actually see them. What do they want, what are they protecting, and do they even believe they have a problem worth solving? Most people skip this entirely and wonder why nothing lands.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="num">3</div>
+        <h3>The Conversation</h3>
+        <div class="tags">Discovery &middot; Questions &middot; Collaboration</div>
+        <p>This is the craft of the exchange itself. Not a script. Not a deck. A live, real-time process of uncovering what&rsquo;s true and building toward a shared understanding of what needs to happen next. The people who are best at this have learned to stay curious longer than feels comfortable.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="num">4</div>
+        <h3>The Close</h3>
+        <div class="tags">Commitment &middot; Alignment &middot; Kickoff</div>
+        <p>The close is not a moment at the end of a conversation. It&rsquo;s the natural output of the other three pillars being done right. When you know who you are, you understand your buyer, and you&rsquo;ve had a real conversation, the close takes care of itself.</p>
+      </div>
+    </div>
+
+    <div class="tq">
+      <p>&ldquo;I came in with a real deal that had been stuck in my pipeline. A dealer who&rsquo;d gone quiet for two months after receiving our proposal. JP&rsquo;s advice was simple. He said, &lsquo;You never actually asked about their timeline. Just be honest about that and ask them directly instead of guessing.&rsquo; It seems like a small thing, but it&rsquo;s exactly the kind of gap you don&rsquo;t notice until someone else points it out.&rdquo;</p>
+      <div class="who">Matthew Rappleyea<span class="role">Senior Account Manager, Ironman 4x4</span></div>
     </div>
   </div>
 </section>
 
-<!-- WHAT I DO NOW -->
+<!-- WHAT YOU GET -->
 <section>
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">What I do now</span>
-      <h2>I lead with a servant heart.</h2>
+      <span class="eyebrow">What a seat includes</span>
+      <h2>One room. Every session live.</h2>
     </div>
-    <div class="prose">
-      <p>It bleeds into everything I do, and I have never found a better expression of it than in sales.</p>
-      <p>If you want to learn what sales <b><i>IS</i></b>, and more importantly what it <b><i>ISN&rsquo;T</i></b>&hellip;<br>
-      That is what I teach.<br>
-      That is what I coach.<br>
-      That is what I advise my clients on.</p>
-      <p class="beat">All of it. From how to sell it yourself on day 1, to how to hire others to sell it for you&hellip; and everything in between.</p>
+    <div class="incl">
+      <div class="incl-item">
+        <h3>Weekly live sessions</h3>
+        <p>Tuesdays at 1:30pm ET. You bring what&rsquo;s in front of you and the room works it with you. Recorded if you can&rsquo;t make it.</p>
+      </div>
+      <div class="incl-item">
+        <h3>Weekly newsletter</h3>
+        <p>Every Sunday. The week&rsquo;s thinking in writing, plus whatever we built in the room that week.</p>
+      </div>
+      <div class="incl-item">
+        <h3>Peers doing the same work</h3>
+        <p>Founders and professionals carrying their own number, who know your story and hold you to it.</p>
+      </div>
+    </div>
+
+    <div class="tq">
+      <p>&ldquo;What I like about this group is it&rsquo;s not just theory, everyone&rsquo;s bringing real deals to the table each week, and you get direct, honest feedback in the moment. Hearing someone else&rsquo;s deal get worked through taught me just as much as working through my own.&rdquo;</p>
+      <div class="who">Matthew Rappleyea<span class="role">Senior Account Manager, Ironman 4x4</span></div>
     </div>
   </div>
 </section>
 
-<!-- TWO WAYS -->
-<section class="pull" style="padding:70px 0">
+<!-- PRICING -->
+<section class="pricing" id="pricing">
   <div class="wrap">
-    <div class="section-head" style="margin-bottom:38px">
-      <span class="eyebrow">Two ways to work with me</span>
+    <div class="section-head">
+      <span class="eyebrow">Two ways in</span>
+      <h2>Same room, same seat. You&rsquo;re choosing how long you stay.</h2>
     </div>
-    <div class="ways">
-      <div class="way">
-        <div class="kind">The weekly room</div>
-        <h3>The Starting Point</h3>
-        <p>A live group room for people doing their own selling. You bring a real deal, we work it with peers in the room.</p>
-        <div class="meta">Tuesdays at 1:30pm ET &middot; <b>From $500/mo</b></div>
-        <div class="go"><a class="buy-btn" href="room.html">See the room</a></div>
+
+    <div class="plans">
+      <div class="plan">
+        <div class="kicker">Start here</div>
+        <div class="name">3 Months</div>
+        <div class="price"><span class="cur">$</span><span class="amt">1,500</span></div>
+        <div class="per"><b>$500/mo</b> &middot; renews every 3 months</div>
+        <ul>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>13 weekly sessions</b> over 3 months</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Renews every 3 months.</li>
+        </ul>
+        <div class="go"><a class="buy-btn" href="https://buy.stripe.com/dRmbJ02YRgIO7d2d6J9MY07" target="_blank" rel="noopener">Take a seat</a></div>
       </div>
-      <div class="way">
-        <div class="kind">One on one</div>
-        <h3>Private Advisory</h3>
-        <p>For owner-operators building a sales function with a team behind them. Built with you, not for you.</p>
-        <div class="meta">Scoped in a conversation &middot; <b>From $7,500/mo</b></div>
-        <div class="go"><a class="buy-btn" href="advisory.html">See how it works</a></div>
+
+      <div class="plan feature">
+        <span class="save-tag">3 months free</span>
+        <div class="kicker">Go the distance</div>
+        <div class="name">12 Months</div>
+        <div class="price"><span class="cur">$</span><span class="amt">4,500</span></div>
+        <div class="per"><b>$375/mo</b> &middot; paid in full</div>
+        <ul>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>52 weekly sessions</b> over 12 months</li>
+          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Pay for 9 months, get 3 free.</li>
+        </ul>
+        <div class="go"><a class="buy-btn" href="https://buy.stripe.com/cNi8wOdDvfEK7d24Ad9MY06" target="_blank" rel="noopener">Take a seat</a></div>
       </div>
+    </div>
+
+    <div class="tq">
+      <p>&ldquo;Every session gives me something I can go apply that week&hellip; not abstract advice, but a specific question to ask or a specific gap to close. That&rsquo;s been the most valuable part for me.&rdquo;</p>
+      <div class="who">Matthew Rappleyea<span class="role">Senior Account Manager, Ironman 4x4</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR / NOT FOR -->
+<section>
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:34px">
+      <span class="eyebrow">Before you take a seat</span>
+    </div>
+    <div class="ff">
+      <div class="ff-card">
+        <div class="lead">This is for you if&hellip;</div>
+        <ul>
+          <li>You&rsquo;re a founder, owner, operator or leader doing your own selling</li>
+          <li>You struggle to feel confident when you&rsquo;re selling</li>
+          <li>You feel like sales is the dirty or cheap part of doing business</li>
+          <li>You worry you come off like a used car salesman</li>
+        </ul>
+        <p class="closer">What you actually want is to walk into any situation ready to sell confidently, without becoming someone you don&rsquo;t like.</p>
+      </div>
+      <div class="ff-card no">
+        <div class="lead">This is not for you if&hellip;</div>
+        <ul>
+          <li>You believe sales is just Jedi-mind-tricks</li>
+          <li>You want to improve your objection handling tactics</li>
+          <li>You&rsquo;re looking for the latest in cold-calling tips</li>
+          <li>You value bro-culture as real life</li>
+        </ul>
+        <p class="closer">You&rsquo;re not going to learn how to overcome objections in a way that degrades your buyer into a victim of internet mastermind BS.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section class="pillars" style="padding:72px 0">
+  <div class="compass-wm" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:30px">
+      <h2>The room is already running.</h2>
+      <p>Every Tuesday at 1:30pm ET. Bring whatever is in front of you and we&rsquo;ll work it.</p>
+    </div>
+    <div style="position:relative;z-index:2;text-align:center;display:flex;gap:13px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-primary" href="#pricing">Take a seat</a>
+      <a class="btn btn-ghost" href="contact.html">Ask me something first</a>
     </div>
   </div>
 </section>
