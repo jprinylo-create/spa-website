@@ -5,6 +5,9 @@
 !/.gitignore
 !/.vercelignore
 !/index.html
+!/about.html
+!/advisory.html
+!/testimonials.html
 !/vip.html
 !/monthly.html
 !/referral.html
@@ -18,6 +21,7 @@
 /assets/img/*
 !/assets/img/spa-logo-horizontal-white.png
 !/assets/img/spa-compass-white.png
+!/assets/img/jp-portrait.webp
 # Reference documents kept with the project (excluded from deploy via .vercelignore):
 !/referral/
 !/referral/SPA-referral-quick-reference.pdf
