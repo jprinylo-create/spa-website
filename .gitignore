@@ -4,6 +4,7 @@
 # ...except what the live site actually needs:
 !/.gitignore
 !/.vercelignore
+!/vercel.json
 !/index.html
 !/room.html
 !/about.html
