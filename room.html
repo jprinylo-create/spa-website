@@ -64,6 +64,8 @@
   .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
   .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
   .hero-cta{display:flex;gap:13px;flex-wrap:wrap}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-90);transform:translateY(-1px)}
 
   section{padding:78px 0}
   .section-head{max-width:64ch;margin:0 auto 46px;text-align:center}
@@ -119,36 +121,39 @@
 
   /* Pricing */
   .pricing{background:var(--mist)}
-  .plans{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:840px;margin:0 auto;align-items:stretch}
-  @media(max-width:760px){.plans{grid-template-columns:1fr;max-width:440px}}
-  .plan{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:38px 30px;display:flex;flex-direction:column;box-shadow:var(--shadow);position:relative}
-  .plan.feature{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:var(--shadow-lift)}
-  .plan .kicker{font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--navy-70)}
-  .plan.feature .kicker{color:#8ea3c4}
-  .plan .name{font-family:var(--serif);font-size:1.6rem;font-weight:900;color:var(--navy);margin:6px 0 4px}
-  .plan.feature .name{color:#fff}
-  .plan .price{display:flex;align-items:baseline;gap:3px;margin:16px 0 2px;color:var(--navy)}
-  .plan.feature .price{color:#fff}
-  .plan .cur{font-family:var(--serif);font-size:1.25rem;font-weight:700;transform:translateY(-15px)}
-  .plan .amt{font-family:var(--serif);font-size:2.9rem;font-weight:900;letter-spacing:-1.5px;line-height:1}
-  .plan .per{font-size:12.5px;color:var(--muted);font-weight:500}
-  .plan.feature .per{color:#9fb0cb}
-  .plan .per b{font-size:14.5px;color:var(--navy);font-weight:700}
-  .plan.feature .per b{color:#fff}
-  .plan ul{list-style:none;margin:18px 0 26px;display:grid;gap:11px}
-  .plan li{position:relative;padding-left:26px;font-size:.95rem;color:#3a4656}
-  .plan.feature li{color:#dbe4ee}
-  .plan li .tick{position:absolute;left:0;top:2px;width:17px;height:17px;color:var(--navy)}
-  .plan.feature li .tick{color:#fff}
-  .plan .go{margin-top:auto}
-  .buy-btn{display:block;text-align:center;text-decoration:none;font-weight:700;padding:15px;border-radius:11px;transition:.2s;border:1.6px solid var(--navy);background:#fff;color:var(--navy)}
-  .buy-btn:hover{background:var(--mist);transform:translateY(-1px)}
-  .plan.feature .buy-btn{background:#fff;border-color:#fff}
-  .plan.feature .buy-btn:hover{background:var(--mist-2)}
-  .save-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;padding:6px 16px;border-radius:999px;border:1.5px solid #fff;white-space:nowrap}
-  .why-term{max-width:60ch;margin:44px auto 0;text-align:center;color:var(--muted);font-weight:300;font-size:1rem}
-  .why-term b{color:var(--navy);font-weight:700}
   .prose p.cite{font-size:.83rem;color:var(--muted);font-weight:300;margin-top:30px;padding-top:16px;border-top:1px solid var(--line);line-height:1.5}
+
+  /* Lead gate form */
+  .is-hidden{display:none !important}
+  .gate{max-width:640px;margin:0 auto}
+  .gate .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:600px){.gate .row{grid-template-columns:1fr;gap:0}}
+  .gate .field{margin-bottom:18px}
+  .gate label{display:block;font-size:12.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--navy-70);margin-bottom:7px}
+  .gate input,.gate textarea,.gate select{width:100%;font-family:var(--sans);font-size:1rem;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:10px;padding:13px 14px;transition:.18s;-webkit-appearance:none;appearance:none}
+  .gate select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 6l5 5 5-5' fill='none' stroke='%235a6577' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:15px;padding-right:40px}
+  .gate textarea{min-height:120px;resize:vertical;line-height:1.55}
+  .gate input:focus,.gate textarea:focus,.gate select:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(20,40,80,.09)}
+  .gate .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+  .gate button{display:block;width:100%;font-family:var(--sans);font-size:1rem;font-weight:700;letter-spacing:.3px;color:#fff;background:var(--navy);border:1.6px solid var(--navy);border-radius:11px;padding:15px;cursor:pointer;transition:.2s}
+  .gate button:hover{background:var(--navy-90);transform:translateY(-1px)}
+  .gate button[disabled]{opacity:.6;cursor:wait;transform:none}
+  .gate .note{margin-top:13px;font-size:13px;color:var(--muted);font-weight:300;text-align:center}
+  .gate .result{margin-top:18px;padding:16px 18px;border-radius:11px;font-size:.98rem;line-height:1.5;display:none}
+  .gate .result.err{display:block;background:#fff;border:1px solid #d8b4b4;color:#8a3a3a}
+  .gate fieldset{border:0;margin:0 0 20px;padding:0}
+  .gate legend{display:block;font-size:12.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--navy-70);margin-bottom:9px}
+  .gate .choices{display:grid;gap:8px}
+  .gate .choice{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:10px;padding:12px 15px;margin:0;background:#fff;cursor:pointer;transition:.15s;font-family:var(--sans);font-size:.97rem;font-weight:400;line-height:1.4;letter-spacing:normal;text-transform:none;color:#3a4656}
+  .gate .choice:has(input:checked){color:var(--navy);font-weight:500}
+  .gate .choice:hover{border-color:var(--navy-70)}
+  .gate .choice input{width:18px;height:18px;flex:0 0 18px;margin:0;padding:0;accent-color:var(--navy);-webkit-appearance:auto;appearance:auto;border-radius:0;box-shadow:none}
+  .gate .choice:has(input:checked){border-color:var(--navy);background:var(--mist);box-shadow:0 0 0 2px rgba(20,40,80,.08)}
+  .gate-done{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:var(--radius);padding:36px 34px;box-shadow:var(--shadow)}
+  .gate-done h3{font-family:var(--serif);font-size:1.6rem;font-weight:900;color:var(--navy);margin-bottom:14px;letter-spacing:-.3px}
+  .gate-done p{color:#3a4656;font-weight:300;font-size:1.04rem;line-height:1.6}
+  .gate-done p.sub{margin-top:16px;padding-top:15px;border-top:1px solid var(--line);font-size:.93rem;color:var(--muted)}
+  @media(max-width:600px){.gate-done{padding:28px 24px}}
 
   footer{background:var(--navy);color:#9fb0cb;padding:46px 0}
   .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
@@ -245,7 +250,7 @@
       <span>No curriculum. No graduation.</span>
     </div>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="#pricing">See the two ways in</a>
+      <a class="btn btn-primary" href="#pricing">Ask about a seat</a>
       <a class="btn btn-ghost" href="#pillars">What we work on</a>
     </div>
   </div>
@@ -289,6 +294,10 @@
   </div>
 </section>
 
+<div class="wrap" style="text-align:center;margin:-26px auto 0">
+  <a class="btn btn-navy" href="#pricing">Ask about a seat</a>
+</div>
+
 <!-- PULL -->
 <section class="pull">
   <div class="wrap">
@@ -306,6 +315,114 @@
       <span class="eyebrow" style="margin-bottom:20px">The expert in the room</span>
       <p class="jp-line">I&rsquo;m not teaching you cheap sales tactics I picked up in an online course or an objection handling mastermind&hellip; I closed over $75 million in fifteen years and lost probably 2-3x as much&hellip; and I&rsquo;m bringing all of the lessons learned, both the good and the bad, to the table each week.</p>
       <div class="jp-who">JP Rinylo, founder</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What a seat includes</span>
+      <h2>One room. Every session live.</h2>
+    </div>
+    <div class="incl">
+      <div class="incl-item">
+        <h3>Weekly live sessions</h3>
+        <p>Tuesdays at 1:30pm ET. You bring what&rsquo;s in front of you and the room works it with you. Recorded if you can&rsquo;t make it.</p>
+      </div>
+      <div class="incl-item">
+        <h3>Weekly newsletter</h3>
+        <p>Every Sunday. The week&rsquo;s thinking in writing, plus whatever we built in the room that week.</p>
+      </div>
+      <div class="incl-item">
+        <h3>Peers doing the same work</h3>
+        <p>Founders and professionals carrying their own number, who know your story and hold you to it.</p>
+      </div>
+    </div>
+
+    <div class="tq">
+      <p>&ldquo;What I like about this group is it&rsquo;s not just theory, everyone&rsquo;s bringing real deals to the table each week, and you get direct, honest feedback in the moment. Hearing someone else&rsquo;s deal get worked through taught me just as much as working through my own.&rdquo;</p>
+      <div class="who">Matthew Rappleyea<span class="role">Senior Account Manager, Ironman 4x4</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div id="room-gate">
+      <div class="section-head">
+        <span class="eyebrow">Taking a seat</span>
+        <h2>Tell me where you are first.</h2>
+        <p>Three quick questions. I read every one of these myself, and your answers tell me whether the room is actually the right thing for you. If it is, I will come back to you with what it costs and how to take a seat.</p>
+      </div>
+
+      <form class="gate" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="5eb40fa3-167f-47ab-8884-8f21cef0ebdd">
+        <input type="hidden" name="subject" value="New seat inquiry from The Room">
+        <input type="hidden" name="from_name" value="The Starting Point">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+        <div class="row">
+          <div class="field">
+            <label for="g-name">Your name</label>
+            <input id="g-name" type="text" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="g-email">Email</label>
+            <input id="g-email" type="email" name="email" required autocomplete="email">
+          </div>
+        </div>
+
+        <fieldset>
+          <legend>Which one is closest to you?</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="role" value="Founder / co-founder of a services firm doing all or most of the selling" required>Founder / co-founder of a services firm doing all or most of the selling</label>
+            <label class="choice"><input type="radio" name="role" value="Partner to a services firm that needs help closing more deals" required>Partner to a services firm that needs help closing more deals</label>
+            <label class="choice"><input type="radio" name="role" value="Sales leader struggling to close deals and help the team win theirs" required>Sales leader struggling to close deals and help the team win theirs</label>
+            <label class="choice"><input type="radio" name="role" value="Individual in a sales role struggling to close deals" required>Individual in a sales role struggling to close deals</label>
+            <label class="choice"><input type="radio" name="role" value="Something else" required>Something else</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>What would you bring to the room first?</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="biggest_gap" value="A deal that is stuck and I don&rsquo;t know why" required>A deal that is stuck and I don&rsquo;t know why</label>
+            <label class="choice"><input type="radio" name="biggest_gap" value="Talking about money and holding my price" required>Talking about money and holding my price</label>
+            <label class="choice"><input type="radio" name="biggest_gap" value="Getting in front of enough people at all" required>Getting in front of enough people at all</label>
+            <label class="choice"><input type="radio" name="biggest_gap" value="Asking for the business and closing it" required>Asking for the business and closing it</label>
+            <label class="choice"><input type="radio" name="biggest_gap" value="I&rsquo;m the only one here who can sell" required>I&rsquo;m the only one here who can sell</label>
+            <label class="choice"><input type="radio" name="biggest_gap" value="How I sound when I sell" required>How I sound when I sell</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Where are you right now?</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="timing" value="Ready to take a seat" required>Ready to take a seat</label>
+            <label class="choice"><input type="radio" name="timing" value="Looking at the next quarter" required>Looking at the next quarter</label>
+            <label class="choice"><input type="radio" name="timing" value="Just getting a feel for it" required>Just getting a feel for it</label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Send it</button>
+        <p class="note">Goes straight to me. I read every one of these myself.</p>
+        <div class="result" role="status" aria-live="polite"></div>
+      </form>
+
+      <div id="gate-done" class="gate-done is-hidden" role="status" aria-live="polite">
+        <h3>Got it, <span class="done-name">there</span>.</h3>
+        <p>I read every one of these myself, so this is not going into a queue somewhere. I will come back to you within a day with whether the room is a fit for where you are, what it costs, and how to take a seat.</p>
+        <p class="sub">If something is urgent before then, email me at <a href="mailto:jp.rinylo@startingpointassociates.com">jp.rinylo@startingpointassociates.com</a>.</p>
+      </div>
+    </div>
+
+
+    <div class="tq">
+      <p>&ldquo;Every session gives me something I can go apply that week&hellip; not abstract advice, but a specific question to ask or a specific gap to close. That&rsquo;s been the most valuable part for me.&rdquo;</p>
+      <div class="who">Matthew Rappleyea<span class="role">Senior Account Manager, Ironman 4x4</span></div>
     </div>
   </div>
 </section>
@@ -357,77 +474,6 @@
   </div>
 </section>
 
-<!-- WHAT YOU GET -->
-<section>
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">What a seat includes</span>
-      <h2>One room. Every session live.</h2>
-    </div>
-    <div class="incl">
-      <div class="incl-item">
-        <h3>Weekly live sessions</h3>
-        <p>Tuesdays at 1:30pm ET. You bring what&rsquo;s in front of you and the room works it with you. Recorded if you can&rsquo;t make it.</p>
-      </div>
-      <div class="incl-item">
-        <h3>Weekly newsletter</h3>
-        <p>Every Sunday. The week&rsquo;s thinking in writing, plus whatever we built in the room that week.</p>
-      </div>
-      <div class="incl-item">
-        <h3>Peers doing the same work</h3>
-        <p>Founders and professionals carrying their own number, who know your story and hold you to it.</p>
-      </div>
-    </div>
-
-    <div class="tq">
-      <p>&ldquo;What I like about this group is it&rsquo;s not just theory, everyone&rsquo;s bringing real deals to the table each week, and you get direct, honest feedback in the moment. Hearing someone else&rsquo;s deal get worked through taught me just as much as working through my own.&rdquo;</p>
-      <div class="who">Matthew Rappleyea<span class="role">Senior Account Manager, Ironman 4x4</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing" id="pricing">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Two ways in</span>
-      <h2>Same room, same seat. You&rsquo;re choosing how long you stay.</h2>
-    </div>
-
-    <div class="plans">
-      <div class="plan">
-        <div class="kicker">Start here</div>
-        <div class="name">3 Months</div>
-        <div class="price"><span class="cur">$</span><span class="amt">1,500</span></div>
-        <div class="per"><b>$500/mo</b> &middot; renews every 3 months</div>
-        <ul>
-          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>13 weekly sessions</b> over 3 months</li>
-          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Renews every 3 months.</li>
-        </ul>
-        <div class="go"><a class="buy-btn" href="https://buy.stripe.com/dRmbJ02YRgIO7d2d6J9MY07" target="_blank" rel="noopener">Take a seat</a></div>
-      </div>
-
-      <div class="plan feature">
-        <span class="save-tag">3 months free</span>
-        <div class="kicker">Go the distance</div>
-        <div class="name">12 Months</div>
-        <div class="price"><span class="cur">$</span><span class="amt">4,500</span></div>
-        <div class="per"><b>$375/mo</b> &middot; paid in full</div>
-        <ul>
-          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>52 weekly sessions</b> over 12 months</li>
-          <li><svg class="tick" viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.5 3.5L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Pay for 9 months, get 3 free.</li>
-        </ul>
-        <div class="go"><a class="buy-btn" href="https://buy.stripe.com/cNi8wOdDvfEK7d24Ad9MY06" target="_blank" rel="noopener">Take a seat</a></div>
-      </div>
-    </div>
-
-    <div class="tq">
-      <p>&ldquo;Every session gives me something I can go apply that week&hellip; not abstract advice, but a specific question to ask or a specific gap to close. That&rsquo;s been the most valuable part for me.&rdquo;</p>
-      <div class="who">Matthew Rappleyea<span class="role">Senior Account Manager, Ironman 4x4</span></div>
-    </div>
-  </div>
-</section>
-
 <!-- FOR / NOT FOR -->
 <section>
   <div class="wrap">
@@ -468,7 +514,7 @@
       <p>Every Tuesday at 1:30pm ET. Bring whatever is in front of you and we&rsquo;ll work it.</p>
     </div>
     <div style="position:relative;z-index:2;text-align:center;display:flex;gap:13px;justify-content:center;flex-wrap:wrap">
-      <a class="btn btn-primary" href="#pricing">Take a seat</a>
+      <a class="btn btn-primary" href="#pricing">Ask about a seat</a>
       <a class="btn btn-ghost" href="contact">Ask me something first</a>
     </div>
   </div>
@@ -489,6 +535,42 @@
     <div class="small">&copy; 2026 Starting Point Associates LLC</div>
   </div>
 </footer>
+
+<script>
+(function () {
+  var gate = document.getElementById('room-gate');
+  var form = gate ? gate.querySelector('form') : null;
+  var done = document.getElementById('gate-done');
+  if (!gate || !form || !done) return;
+
+  var btn = form.querySelector('button');
+  var out = form.querySelector('.result');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    var first = (form.querySelector('[name=name]').value || '').trim().split(/\s+/)[0];
+    out.className = 'result';
+    btn.disabled = true;
+    var label = btn.textContent;
+    btn.textContent = 'Sending...';
+    fetch(form.action, { method: 'POST', body: new FormData(form) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (!d.success) throw new Error(d.message || 'failed');
+        done.querySelector('.done-name').textContent = first || 'there';
+        form.classList.add('is-hidden');
+        done.classList.remove('is-hidden');
+        done.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      })
+      .catch(function () {
+        out.className = 'result err';
+        out.innerHTML = 'That did not go through. Email me directly at <a href="mailto:jp.rinylo@startingpointassociates.com">jp.rinylo@startingpointassociates.com</a> and I will pick it up from there.';
+      })
+      .finally(function () { btn.disabled = false; btn.textContent = label; });
+  });
+})();
+</script>
 
 </body>
 </html>
